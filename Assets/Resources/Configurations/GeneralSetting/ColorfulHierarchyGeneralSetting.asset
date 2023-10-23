@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edb8eb7125ea44f68bbe616b44fa9bc, type: 3}
+  m_Name: ColorfulHierarchyGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  useSpecificJsonFile: 0
+  jsonFile: {fileID: 0}
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  colorPresets:
+  - keyChar: $
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0.9339623, g: 0.4468369, b: 0, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1
+  - keyChar: ^
+    textColor: {r: 0.9393531, g: 0.9719359, b: 1, a: 1}
+    backgroundColor: {r: 0.30617636, g: 0.8207547, b: 0, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1
+  - keyChar: '#'
+    textColor: {r: 0, g: 0.48192382, b: 1, a: 1}
+    backgroundColor: {r: 0.8867924, g: 0.8137625, b: 0, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1
+  - keyChar: '@'
+    textColor: {r: 1, g: 0, b: 0.47644043, a: 1}
+    backgroundColor: {r: 0, g: 1, b: 0.7838328, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1
+  - keyChar: /
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 1, g: 0, b: 0.88915014, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1
+  - keyChar: '%'
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0.6623492, g: 0, b: 1, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1
+  - keyChar: '!'
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0.8396226, g: 0.044131093, b: 0.13235635, a: 1}
+    textAlignment: 4
+    fontStyle: 1
+    autoUpperLetters: 1

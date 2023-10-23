@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="propertyEntry">
+        <ui:VisualElement name="PropertyIcon" class="propertyIcon" />
+        <ui:Label tabindex="-1" text="生命值" display-tooltip-when-elided="true" name="PropertyName" class="propertyName" style="margin-right: 0; margin-left: 0; margin-top: 0; margin-bottom: 0;" />
+        <ui:Label tabindex="-1" text="0/100" display-tooltip-when-elided="true" name="PropertyValue" class="propertyValue" />
+    </ui:VisualElement>
+</ui:UXML>

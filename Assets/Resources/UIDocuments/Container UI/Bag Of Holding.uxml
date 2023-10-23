@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="DynamicTypeFilterEntry" src="project://database/Assets/Resources/UIDocuments/Container%20UI/DynamicTypeFilterEntry.uxml?fileID=9197481963319205126&amp;guid=1238ab80039df7e428bd1ed6ebedd501&amp;type=3#DynamicTypeFilterEntry" />
+    <Style src="project://database/Assets/Resources/UIDocuments/Container%20UI/BagOfHodingStyle.uss?fileID=7433441132597879392&amp;guid=05c8be4c36864f84e9a70c529c33abcd&amp;type=3#BagOfHodingStyle" />
+    <Style src="project://database/Assets/Resources/UIDocuments/DefaultThemeStyle.uss?fileID=7433441132597879392&amp;guid=5caa165ed418a734b985147969ea699e&amp;type=3#DefaultThemeStyle" />
+    <Style src="project://database/Assets/Resources/UIDocuments/Container%20UI/DefaultSlotStyle.uss?fileID=7433441132597879392&amp;guid=9b2bbc8c23dfae449b2072578183a3e1&amp;type=3#DefaultSlotStyle" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column; flex-wrap: wrap; justify-content: flex-end; background-image: resource(&apos;Images/UI/In Game Menu/主界面/乾坤袋ui/qiankundai_di&apos;); width: 720px; height: 968px; position: absolute; top: -3px; left: 1000px;">
+        <ui:Button display-tooltip-when-elided="true" name="CloseButton" focusable="false" style="position: absolute; top: 8px; left: 651px; background-color: rgba(188, 188, 188, 0); background-image: resource(&apos;Images/UI/In Game Menu/主界面/乾坤袋ui/icon_cha&apos;); width: 55px; height: 55px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+        <ui:VisualElement name="FixedTypeFilterContainer" style="background-color: rgba(0, 0, 0, 0); position: absolute; left: 74px; bottom: 823px; flex-direction: row; align-items: flex-start; justify-content: flex-end; align-self: auto;" />
+        <ui:VisualElement name="VisualElement" style="position: absolute; width: 541px; height: 761px; top: 148px; left: 69px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <ui:VisualElement name="QuickBar" style="background-color: rgba(0, 0, 0, 0); height: 165px; padding-left: 15px; padding-right: 15px; flex-direction: row; margin-bottom: 0; flex-wrap: wrap;">
+                <SlotVisualElement SlotIndex="1" IgnoreBorderChange="true" IgnoreBackgroundChange="true" style="flex-grow: 0.1;" />
+                <SlotVisualElement SlotIndex="2" IgnoreBorderChange="true" IgnoreBackgroundChange="true" style="flex-grow: 0.1;" />
+                <SlotVisualElement SlotIndex="3" IgnoreBorderChange="true" IgnoreBackgroundChange="true" style="flex-grow: 0.1;" />
+                <SlotVisualElement SlotIndex="4" IgnoreBorderChange="true" IgnoreBackgroundChange="true" style="flex-grow: 0.1;" />
+            </ui:VisualElement>
+            <ui:ScrollView name="MainSlotsList" mouse-wheel-scroll-size="1000" style="height: 426px;" />
+            <ui:ScrollView name="DynamicTypeFilterContainer" mouse-wheel-scroll-size="1000" style="height: 114px; margin-left: 5px; margin-right: 5px; margin-top: 11px;">
+                <ui:Instance template="DynamicTypeFilterEntry" name="DynamicTypeFilterEntry" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); position: absolute; height: auto; top: 296px; width: auto; left: 606px; align-items: flex-start;">
+            <ui:Button focusable="false" text="Stack" name="StackButton" class="toolButton" />
+            <ui:Button focusable="false" text="Sort" name="SortButton" class="toolButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

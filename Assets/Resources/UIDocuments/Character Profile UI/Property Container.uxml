@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="PropertyTypeContainer" style="overflow: visible;">
+        <ui:VisualElement name="PropertyCategoryNameContainer" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; width: 100%;">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="PropertyCategoryName" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

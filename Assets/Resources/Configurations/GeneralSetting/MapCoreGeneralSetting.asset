@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2c011f83e83c04f8b2fb28f9a7c7cc, type: 3}
+  m_Name: MapCoreGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: typeBasicInfo
+      Entry: 7
+      Data: 0|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[MapBasis.MapConfiguration,
+        Assembly-CSharp],[MapCoreGeneralSetting, Assembly-CSharp]], Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: map_core
+    - Name: name
+      Entry: 7
+      Data: 1|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 
+    - Name: allTranslations
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 3|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: MapCore
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u5730\u56FE\u6838\u5FC3"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: subtypes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[MapBasis.MapConfiguration,
+        Assembly-CSharp],[MapCoreGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[MapBasis.MapConfiguration,
+        Assembly-CSharp],[MapCoreGeneralSetting, Assembly-CSharp]], Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: default_map_core_type
+    - Name: name
+      Entry: 7
+      Data: 7|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 
+    - Name: allTranslations
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 9|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Default Map Core Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u9ED8\u8BA4\u5730\u56FE\u6838\u5FC3\u79CD\u7C7B"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: subtypes
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[MapBasis.MapConfiguration,
+        Assembly-CSharp],[MapCoreGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parentID
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parentID
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  useSpecificJsonFile: 0
+  jsonFile: {fileID: 0}
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  defaultTypeID: default_map_core_type
+  isTypeIDUnique: 1
+  willShowPrefabOnWindowSide: 0
+  allGameItemPrefabs:
+  - id: default_map_core
+    isActive: 1
+    isDebugging: 1
+    gameTypesID: []
+    uniqueGameType:
+      id: 
+      name:
+        contentPreviewing: 
+        allTranslations: []
+    name:
+      contentPreviewing: "\u9ED8\u8BA4\u5730\u56FE\u6838\u5FC3"
+      allTranslations:
+      - languageType: English
+        translation: Default Map Core
+      - languageType: Chinese
+        translation: "\u9ED8\u8BA4\u5730\u56FE\u6838\u5FC3"
+    mapType: 0
+    isInfinityInX: 0
+    isInfinityInY: 0
+    isInfinityInZ: 0
+    chunkSize: {x: 100, y: 100, z: 1}
+    fixedSize: {x: 1, y: 1, z: 1}
+    chunkLoadingRadius: {x: 1, y: 1, z: 1}
+    onceChunkAddedMaxAmount: 8
+    chunkDeleteRadius: {x: 2, y: 2, z: 1}
+    visibleFaces: 126

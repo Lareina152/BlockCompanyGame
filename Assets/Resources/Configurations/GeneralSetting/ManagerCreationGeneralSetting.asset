@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c62ce23be73d8549b01360975414fac, type: 3}
+  m_Name: ManagerCreationGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: managerTypeContainers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[ManagerType, Assembly-CSharp],[ContainerChooser,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[ManagerType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 2|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: SettingCore
+    - Name: container
+      Entry: 10
+      Data: 0
+    - Name: parentContainer
+      Entry: 7
+      Data: 3|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: ^Core
+    - Name: container
+      Entry: 10
+      Data: 1
+    - Name: parentContainer
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 4|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: ProcedureCore
+    - Name: container
+      Entry: 10
+      Data: 2
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 5|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: EventCore
+    - Name: container
+      Entry: 10
+      Data: 3
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 6|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: UICore
+    - Name: container
+      Entry: 10
+      Data: 4
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 7|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: NetworkCore
+    - Name: container
+      Entry: 10
+      Data: 5
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  useSpecificJsonFile: 0
+  jsonFile: {fileID: 0}
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  managerContainer:
+    containerID: ^Core
+    container: {fileID: 0}

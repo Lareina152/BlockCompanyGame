@@ -1,0 +1,56 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UIDocuments/Container%20UI/DefaultSlotStyle.uss?fileID=7433441132597879392&amp;guid=9b2bbc8c23dfae449b2072578183a3e1&amp;type=3#DefaultSlotStyle" />
+    <Style src="project://database/Assets/Resources/UIDocuments/Container%20UI/ChestStyle.uss?fileID=7433441132597879392&amp;guid=50125242bbb332e4095a0f0da3fb36df&amp;type=3#ChestStyle" />
+    <ui:VisualElement picking-mode="Ignore" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-self: flex-start; position: absolute; top: 353px; left: 55px; background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/cailiao_msk&apos;); height: 426px; width: 921px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+        <ui:VisualElement style="background-color: rgba(0, 0, 0, 0);">
+            <ui:VisualElement picking-mode="Ignore" style="flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+            </ui:VisualElement>
+            <ui:VisualElement picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-wrap: nowrap; justify-content: center; align-self: auto; align-items: stretch;">
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+                <SlotVisualElement />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ToolBar">
+            <ui:Button text="堆叠" display-tooltip-when-elided="true" name="StackButton" focusable="false" />
+            <ui:Button text="排序" display-tooltip-when-elided="true" name="SortButton" focusable="false" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

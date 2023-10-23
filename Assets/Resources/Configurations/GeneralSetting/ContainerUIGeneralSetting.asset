@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd3f09bb84b5bb4a9539d55002dd6ea, type: 3}
+  m_Name: ContainerUIGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  useSpecificJsonFile: 0
+  jsonFile: {fileID: 0}
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  slotVisualTree: {fileID: 9197481963319205126, guid: d33a1ee635e1ae8478f4fd5cc7ccc0c7, type: 3}
+  stackButtonDisplayName:
+    contentPreviewing: "\u5806\u53E0"
+    allTranslations:
+    - languageType: Chinese
+      translation: "\u5806\u53E0"
+    - languageType: English
+      translation: Sort
+  sortButtonDisplayName:
+    contentPreviewing: "\u6392\u5E8F"
+    allTranslations:
+    - languageType: Chinese
+      translation: "\u6392\u5E8F"
+    - languageType: English
+      translation: Sort
+  defaultThresholdToDisplayTypeFilter: 1
+  typeFilterConfigs:
+    configs:
+    - gameTypeID: food_type
+      countThreshold: 1
+      isFixedDisplay: 1
+    - gameTypeID: ore_type
+      countThreshold: 1
+      isFixedDisplay: 1
+    - gameTypeID: talisman_type
+      countThreshold: 1
+      isFixedDisplay: 1
+    - gameTypeID: materials_type
+      countThreshold: 1
+      isFixedDisplay: 1
+    - gameTypeID: forge_materials_type
+      countThreshold: 1
+      isFixedDisplay: 0
+    - gameTypeID: alchemy_materials_type
+      countThreshold: 1
+      isFixedDisplay: 0

@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/UIDocuments/Context%20Menu%20UI/Context%20Menu%20Style.uss?fileID=7433441132597879392&amp;guid=af732f1493caaec4cbeca9a155919666&amp;type=3#Context Menu Style" />
+    <ui:VisualElement name="ContextMenuContainer" style="position: absolute; top: 356px; left: 588px; background-image: resource(&apos;Images/UI/In Game Menu/主界面/乾坤袋ui/icon_paixu_fk&apos;); padding-left: 50px; padding-right: 50px; padding-top: 30px; padding-bottom: 30px; -unity-font-definition: resource(&apos;Fonts/鸿雷板书简体&apos;); font-size: 45px; -unity-font-style: bold; min-width: 327px;" />
+</ui:UXML>

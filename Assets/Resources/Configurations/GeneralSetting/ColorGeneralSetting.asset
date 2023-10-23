@@ -1,0 +1,379 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dead0b02d376c9d44a46c84b2d1bf2c4, type: 3}
+  m_Name: ColorGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  errorOutput: 
+  useSpecificJsonFile: 1
+  jsonFile: {fileID: 4900000, guid: 3b20efe95bef6824aad2bc685778a022, type: 3}
+  jsonFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  colorNameDictionary:
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u9ED1\u8272"
+      - languageType: English
+        translation: Black
+  - color: {r: 0.21176471, g: 0.21176471, b: 0.21176471, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6D45\u9ED1"
+      - languageType: English
+        translation: Light Black
+  - color: {r: 0.18431373, g: 0.30980393, b: 0.30980393, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u77F3\u677F\u7070"
+      - languageType: English
+        translation: Dark Slate Gray
+  - color: {r: 0.4392157, g: 0.5019608, b: 0.5647059, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u77F3\u677F\u7070"
+      - languageType: English
+        translation: Slate Gray
+  - color: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u7070\u8272"
+      - languageType: English
+        translation: Dark Grey
+  - color: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6697\u7070\u8272"
+      - languageType: English
+        translation: Dim Gray
+  - color: {r: 0.74509805, g: 0.74509805, b: 0.74509805, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7070\u8272"
+      - languageType: English
+        translation: Gray
+  - color: {r: 0.827451, g: 0.827451, b: 0.827451, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6D45\u7070\u8272"
+      - languageType: English
+        translation: Light Gray
+  - color: {r: 0.972549, g: 0.972549, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u5E7D\u7075\u767D"
+      - languageType: English
+        translation: Ghost White
+  - color: {r: 1, g: 1, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u767D\u8272"
+      - languageType: English
+        translation: White
+  - color: {r: 0, g: 1, b: 0.49803922, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6625\u7EFF\u8272"
+      - languageType: English
+        translation: Spring Green
+  - color: {r: 0.5647059, g: 0.93333334, b: 0.5647059, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6D45\u7EFF\u8272"
+      - languageType: English
+        translation: Light Green
+  - color: {r: 0.6784314, g: 1, b: 0.18431373, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u9EC4\u7EFF\u8272"
+      - languageType: English
+        translation: Green Yellow
+  - color: {r: 0.18039216, g: 0.54509807, b: 0.34117648, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6D77\u7EFF\u8272"
+      - languageType: English
+        translation: Sea Green
+  - color: {r: 0.41960785, g: 0.5568628, b: 0.13725491, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u8349\u7EFF\u8272"
+      - languageType: English
+        translation: OliveDrab
+  - color: {r: 0.33333334, g: 0.41960785, b: 0.18431373, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u6A44\u6984\u7EFF"
+      - languageType: English
+        translation: Dark Olive Green
+  - color: {r: 0, g: 0.39215687, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u7EFF\u8272"
+      - languageType: English
+        translation: Dark Green
+  - color: {r: 0, g: 1, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7EFF\u8272"
+      - languageType: English
+        translation: Green
+  - color: {r: 0.5019608, g: 0.2509804, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u68D5\u8272"
+      - languageType: English
+        translation: Brown
+  - color: {r: 0.69803923, g: 0.13333334, b: 0.13333334, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7816\u7EA2\u8272"
+      - languageType: English
+        translation: Firebrick
+  - color: {r: 0.8039216, g: 0.36078432, b: 0.36078432, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u5370\u5EA6\u7EA2"
+      - languageType: English
+        translation: Indian Red
+  - color: {r: 0.5660378, g: 0.24335046, b: 0.24335046, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6817\u8272"
+      - languageType: English
+        translation: Maroon
+  - color: {r: 0.54509807, g: 0, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u7EA2\u8272"
+      - languageType: English
+        translation: Dark Red
+  - color: {r: 1, g: 0, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7EA2\u8272"
+      - languageType: English
+        translation: Red
+  - color: {r: 0.2509804, g: 0.8784314, b: 0.8156863, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7EFF\u677E\u77F3\u8272"
+      - languageType: English
+        translation: Turquoise
+  - color: {r: 0.09803922, g: 0.09803922, b: 0.4392157, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u5348\u591C\u84DD"
+      - languageType: English
+        translation: Midnight Blue
+  - color: {r: 0, g: 0, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u84DD\u8272"
+      - languageType: English
+        translation: Blue
+  - color: {r: 1, g: 0.84313726, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u91D1\u8272"
+      - languageType: English
+        translation: Gold
+  - color: {r: 1, g: 1, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u9EC4\u8272"
+      - languageType: English
+        translation: Yellow
+  - color: {r: 0.1254902, g: 0.69803923, b: 0.6666667, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6D45\u6D77\u7EFF\u8272"
+      - languageType: English
+        translation: Light Sea Green
+  - color: {r: 0.11764706, g: 0.5647059, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u9053\u5947\u84DD"
+      - languageType: English
+        translation: Dodger Blue
+  - color: {r: 0, g: 0.7490196, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u5929\u84DD\u8272"
+      - languageType: English
+        translation: Deep Sky Blue
+  - color: {r: 0.5294118, g: 0.80784315, b: 0.92156863, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u5929\u84DD\u8272"
+      - languageType: English
+        translation: Sky Blue
+  - color: {r: 0.9411765, g: 1, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u851A\u84DD\u8272"
+      - languageType: English
+        translation: Azure
+  - color: {r: 0, g: 1, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u9752\u8272"
+      - languageType: English
+        translation: Aqua
+  - color: {r: 0.7294118, g: 0.33333334, b: 0.827451, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u4E2D\u5170\u82B1\u8272"
+      - languageType: English
+        translation: Meduim Orchid
+  - color: {r: 0.93333334, g: 0.50980395, b: 0.93333334, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7D2B\u7F57\u5170\u8272"
+      - languageType: English
+        translation: Violet
+  - color: {r: 0.8666667, g: 0.627451, b: 0.8666667, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u674E\u5B50"
+      - languageType: English
+        translation: Plum
+  - color: {r: 0.41568628, g: 0.3529412, b: 0.8039216, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u77F3\u677F\u84DD"
+      - languageType: English
+        translation: Slate Blue
+  - color: {r: 0.5764706, g: 0.4392157, b: 0.85882354, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u4E2D\u7D2B"
+      - languageType: English
+        translation: Meduim Purple
+  - color: {r: 0.627451, g: 0.1254902, b: 0.9411765, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7D2B\u8272"
+      - languageType: English
+        translation: Purple
+  - color: {r: 0.54509807, g: 0, b: 0.54509807, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6DF1\u6D0B\u7EA2"
+      - languageType: English
+        translation: Dark Magenta
+  - color: {r: 1, g: 0, b: 1, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u54C1\u7EA2"
+      - languageType: English
+        translation: Magenta
+  - color: {r: 1, g: 0.3882353, b: 0.2784314, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u756A\u8304\u8272"
+      - languageType: English
+        translation: Tomato
+  - color: {r: 1, g: 0.49803922, b: 0.3137255, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u73CA\u745A\u8272"
+      - languageType: English
+        translation: Coral
+  - color: {r: 1, g: 0.5019608, b: 0, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u6A59\u8272"
+      - languageType: English
+        translation: Orange
+  - color: {r: 1, g: 0.4117647, b: 0.7058824, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u4EAE\u7C89\u8272"
+      - languageType: English
+        translation: Hot Pink
+  - color: {r: 0.84705883, g: 0.7490196, b: 0.84705883, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u84DF\u8272"
+      - languageType: English
+        translation: Thistle
+  - color: {r: 1, g: 0.7529412, b: 0.79607844, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u7C89\u8272"
+      - languageType: English
+        translation: Pink
+  - color: {r: 0.9607843, g: 0.87058824, b: 0.7019608, a: 1}
+    name:
+      allTranslations:
+      - languageType: Chinese
+        translation: "\u5C0F\u9EA6\u8272"
+      - languageType: English
+        translation: Wheat

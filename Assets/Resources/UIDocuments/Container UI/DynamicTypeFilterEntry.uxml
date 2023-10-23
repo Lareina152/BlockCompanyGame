@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="DynamicTypeFilterEntry" style="flex-direction: row; justify-content: center;">
+        <ToggleVisualElement name="FilterToggle" />
+        <ui:Label text="Label" name="TypeName" />
+    </ui:VisualElement>
+</ui:UXML>

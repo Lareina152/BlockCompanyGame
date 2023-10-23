@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="DebugEntry" picking-mode="Ignore" style="flex-grow: initial; background-color: rgba(0, 0, 0, 0); align-self: flex-start; flex-direction: row;">
+        <ui:Label tabindex="-1" text="Title:" display-tooltip-when-elided="true" name="Title" picking-mode="Ignore" style="font-size: 40px; -unity-font-definition: resource(&apos;Fonts/VonwaonBitmap-12px SDF&apos;);" />
+        <ui:Label tabindex="-1" text="Content" display-tooltip-when-elided="true" name="Content" picking-mode="Ignore" style="font-size: 40px; -unity-font-definition: resource(&apos;Fonts/VonwaonBitmap-12px SDF&apos;);" />
+    </ui:VisualElement>
+</ui:UXML>

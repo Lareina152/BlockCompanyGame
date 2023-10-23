@@ -1,0 +1,73 @@
+#InputMappingEntryContainer TemplateContainer {
+    align-items: stretch;
+    flex-grow: 1;
+    height: auto;
+}
+
+.inputMappingEntry {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-grow: 1;
+}
+
+.inputMappingName {
+    -unity-font-definition: resource('Fonts/鸿雷板书简体');
+    font-size: 50px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    align-self: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.inputMappingButtonContainer {
+    justify-content: space-around;
+}
+
+.inputMappingButtonContainer > Button {
+    -unity-font-definition: resource('Fonts/鸿雷板书简体');
+    font-size: 45px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    -unity-text-align: middle-center;
+    padding-bottom: 20px;
+    background-image: resource('Images/UI/In Game Menu/主界面/主界面HUD/cailiao_msk');
+    align-self: center;
+}
+
+.inputMappingButtonContainer > Button:hover {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.inputMappingIcon {
+}
+
+.inputMappingIconBackground {
+    height: 200px;
+    width: 200px;
+}
+
+#InputMappingEntryContainer #unity-content-container {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}

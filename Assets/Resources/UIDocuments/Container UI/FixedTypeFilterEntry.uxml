@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Border">
+        <ui:VisualElement name="Icon" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>
