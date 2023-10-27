@@ -224,11 +224,12 @@ namespace Basis.GameItem
 
                     if (customTooltipPropertiesMode == CustomTooltipPropertiesMode.Incremental)
                     {
-                        var defaultConfigs = GetGeneralSetting().GetDefaultTooltipPropertyConfigsConfigs();
+                        var defaultConfigs = GetStaticGeneralSettingStrictly().
+                            GetDefaultTooltipPropertyConfigsConfigs();
 
                         if (defaultConfigs == null)
                         {
-                            Note.note.Error($"无法获取{GetGeneralSetting()}的默认提示框属性设置");
+                            Note.note.Error($"无法获取{GetStaticGeneralSetting()}的默认提示框属性设置");
                         }
                         else
                         {
@@ -250,7 +251,7 @@ namespace Basis.GameItem
                     return tooltipPropertyConfigsRuntime;
                 }
 
-                return GetGeneralSetting().GetDefaultTooltipPropertyConfigsConfigs();
+                return GetStaticGeneralSettingStrictly().GetDefaultTooltipPropertyConfigsConfigs();
             }
         }
 

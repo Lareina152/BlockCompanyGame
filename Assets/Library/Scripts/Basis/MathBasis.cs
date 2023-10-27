@@ -1878,9 +1878,9 @@ namespace Basis
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static int Normalize(this int t, int min, int max)
+        public static float Normalize(this int t, int min, int max)
         {
-            return (t - min) / (max - min);
+            return (t - min).F() / (max - min);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1902,13 +1902,13 @@ namespace Basis
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector2Int Normalize(this Vector2Int t, Vector2Int min, Vector2Int max)
+        public static Vector2 Normalize(this Vector2Int t, Vector2Int min, Vector2Int max)
         {
             return t.ForeachNumber(min, max, (num, minNum, maxNum) => num.Normalize(minNum, maxNum));
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3Int Normalize(this Vector3Int t, Vector3Int min, Vector3Int max)
+        public static Vector3 Normalize(this Vector3Int t, Vector3Int min, Vector3Int max)
         {
             return t.ForeachNumber(min, max, (num, minNum, maxNum) => num.Normalize(minNum, maxNum));
         }

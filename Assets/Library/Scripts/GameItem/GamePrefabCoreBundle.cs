@@ -149,6 +149,8 @@ namespace Basis.GameItem
 
             public static bool gameTypeAbandoned = false;
 
+            private static TGeneralSetting generalSetting;
+
             /// <summary>
             /// 推荐的ID后缀
             /// </summary>
@@ -224,13 +226,11 @@ namespace Basis.GameItem
             [ShowIf("@" + nameof(currentType) + " != " + nameof(prefabType))]
             public Type currentType => GetType();
 
-            private TGeneralSetting generalSetting;
-
             #region GUI
 
             protected override void OnInspectorInit()
             {
-                generalSetting = GetGeneralSetting();
+                //generalSetting = GetGeneralSetting();
 
                 CheckGameTypeIfAbandoned();
 
@@ -286,7 +286,14 @@ namespace Basis.GameItem
             [FoldoutGroup(EXTENDED_CLASS_CATEGORY)]
             private void ChangeType()
             {
-                GetGeneralSetting().InvokeMethod("ChangeType");
+                if (TryGetStaticGeneralSetting(out var setting))
+                {
+                    setting.InvokeMethod("ChangeType");
+                }
+                else
+                {
+                    Note.note.Error("没有找到对应的通用用设置");
+                }
             }
 
 #if UNITY_EDITOR
@@ -388,7 +395,7 @@ namespace Basis.GameItem
                         Note.note.Error("没有任何种类");
                     }
 
-                    if (gameTypesID.Count > 1 && GetGeneralSetting().isTypeIDUnique)
+                    if (gameTypesID.Count > 1 && GetStaticGeneralSettingStrictly().isTypeIDUnique)
                     {
                         Note.note.Error("种类ID不唯一");
                     }
@@ -411,50 +418,61 @@ namespace Basis.GameItem
             #region GetGeneralSetting
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public TGeneralSetting GetGeneralSetting()
-            {
-                if (generalSetting == null)
-                {
-                    return GetStaticGeneralSetting();
-                }
-
-                return generalSetting;
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public bool TryGetGeneralSetting(out TGeneralSetting generalSetting)
-            {
-                generalSetting = GetStaticGeneralSetting();
-
-                return generalSetting != null;
-            }
-
-            [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public void SetGeneralSetting(TGeneralSetting newGeneralSetting)
+            internal static void SetStaticGeneralSetting(TGeneralSetting newGeneralSetting)
             {
                 Note.note.AssertIsNotNull(newGeneralSetting, nameof(newGeneralSetting));
                 generalSetting = newGeneralSetting;
             }
 
             /// <summary>
-            /// 获得此预制体对应的通用设置，用于在Editor模式下调用，此方法基于反射实现，效率较低
+            /// 获得此预制体对应的通用设置，Editor和Runtime下调用皆可
             /// </summary>
             /// <returns></returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static TGeneralSetting GetStaticGeneralSetting()
             {
-                return GameCoreSettingBase.FindGeneralSetting<TGeneralSetting>();
+                if (generalSetting == null)
+                {
+                    return GameCoreSettingBase.FindGeneralSetting<TGeneralSetting>();
+                }
+
+                return generalSetting;
             }
 
             /// <summary>
-            /// 尝试获得此预制体对应的通用设置，用于在Editor模式下调用，此方法基于反射实现，效率较低
+            /// 获得此预制体对应的通用设置，Editor和Runtime下调用皆可，如果没有找到则会报错
+            /// </summary>
+            /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            [NotNull]
+            public static TGeneralSetting GetStaticGeneralSettingStrictly()
+            {
+                var setting = GetStaticGeneralSetting();
+
+                if (setting == null)
+                {
+                    Note.note.Error("找不到通用设置");
+                }
+
+                return setting;
+            }
+
+            /// <summary>
+            /// 尝试获得此预制体对应的通用设置，Editor和Runtime下调用皆可
             /// </summary>
             /// <param name="setting">获得的通用设置</param>
             /// <returns>尝试结果</returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static bool TryGetStaticGeneralSetting(out TGeneralSetting setting)
             {
-                setting = GameCoreSettingBase.FindGeneralSetting<TGeneralSetting>();
+                if (generalSetting == null)
+                {
+                    setting = GameCoreSettingBase.FindGeneralSetting<TGeneralSetting>();
+                }
+                else
+                {
+                    setting = generalSetting;
+                }
 
                 return setting != null;
             }
@@ -523,7 +541,8 @@ namespace Basis.GameItem
             /// 获得随机的预制体
             /// </summary>
             /// <returns></returns>
-            public static TPrefab GetRandomPrefabByType()
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static TPrefab GetRandomPrefab()
             {
                 return allPrefabsByID.Values.Choose();
             }
@@ -532,22 +551,48 @@ namespace Basis.GameItem
             /// 获取所有预制体
             /// </summary>
             /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static IReadOnlyList<TPrefab> GetAllPrefabs()
             {
-                return allPrefabsByID.Values.ToList();
+                return generalSetting.GetAllPrefabs();
             }
 
             /// <summary>
             /// 获取所有预制体
             /// </summary>
             /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static IReadOnlyList<T> GetAllPrefabs<T>() where T : TPrefab
             {
-                return allPrefabsByID.Values.Where(prefab => prefab is T).Cast<T>().ToList();
+                return GetAllPrefabs().Where(prefab => prefab is T).Cast<T>().ToList();
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static TPrefab GetFirstPrefab()
+            {
+                return generalSetting.GetAllPrefabs().FirstOrDefault();
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static T GetFirstPrefab<T>() where T : TPrefab
+            {
+                return generalSetting.GetAllPrefabs().FirstOrDefault(prefab => prefab is T) as T;
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static TPrefab GetLastPrefab()
+            {
+                return generalSetting.GetAllPrefabs().LastOrDefault();
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static T GetLastPrefab<T>() where T : TPrefab
+            {
+                return generalSetting.GetAllPrefabs().LastOrDefault(prefab => prefab is T) as T;
             }
 
             /// <summary>
-            /// 从通用设置里用ID获取预制体，一般用于在Editor模式下调用
+            /// 从通用设置里用ID获取预制体，一般用于在Editor模式下调用，效率较低
             /// </summary>
             /// <param name="id"></param>
             /// <returns></returns>
@@ -675,9 +720,13 @@ namespace Basis.GameItem
 
             private IEnumerable GetTypeNameList()
             {
-                var generalSetting = GetGeneralSetting();
+                var generalSetting = GetStaticGeneralSetting();
 
-                Note.note.AssertIsNotNull(generalSetting, nameof(generalSetting));
+                if (generalSetting == null)
+                {
+                    Note.note.Warning("找不到通用设置");
+                    return null;
+                }
 
                 return generalSetting.GetTypeNameList();
             }
@@ -857,6 +906,12 @@ namespace Basis.GameItem
             protected const string MISCELLANEOUS_SETTING_CATEGORY = "杂项设置";
 
             protected const string TEST_CATEGORY = "测试";
+
+            private const string DEBUGGING_MODE_STATE_SETTING_CATEGORY = TEST_CATEGORY + 
+                                                                         "/调试模式设置";
+
+            private const string PREFABS_ACTIVE_STATE_SETTING_CATEGORY = TEST_CATEGORY + 
+                                                                         "/预制体启用状态设置";
 
             [LabelText("Excel存储路径")]
             [GUIColor(0.906f, 0.635f, 0.227f)]
@@ -1106,6 +1161,7 @@ namespace Basis.GameItem
 
             [Button(@"@""打开所有"" + " + nameof(prefabName) + "+" + nameof(prefabSuffixName) + @"+""的调试模式""")]
             [TitleGroup(TEST_CATEGORY)]
+            [HorizontalGroup(DEBUGGING_MODE_STATE_SETTING_CATEGORY)]
             private void EnableAllPrefabsDebuggingMode()
             {
                 foreach (var prefab in allGameItemPrefabs)
@@ -1114,8 +1170,9 @@ namespace Basis.GameItem
                 }
             }
 
-            [Button(@"@""关闭所有"" + " + nameof(prefabName) + "+" + nameof(prefabSuffixName) + @"+""的调试模式""")]
-            [TitleGroup(TEST_CATEGORY)]
+            [Button(@"@""关闭所有"" + " + nameof(prefabName) + "+" + 
+                    nameof(prefabSuffixName) + @"+""的调试模式""")]
+            [HorizontalGroup(DEBUGGING_MODE_STATE_SETTING_CATEGORY)]
             private void DisableAllPrefabsDebuggingMode()
             {
                 foreach (var prefab in allGameItemPrefabs)
@@ -1124,8 +1181,9 @@ namespace Basis.GameItem
                 }
             }
 
-            [Button(@"@""启用所有的"" + " + nameof(prefabName) + "+" + nameof(prefabSuffixName))]
-            [TitleGroup(TEST_CATEGORY)]
+            [Button(@"@""启用所有的"" + " + nameof(prefabName) + "+" + 
+                    nameof(prefabSuffixName))]
+            [HorizontalGroup(PREFABS_ACTIVE_STATE_SETTING_CATEGORY)]
             private void EnableAllPrefabsActiveState()
             {
                 foreach (var prefab in allGameItemPrefabs)
@@ -1134,8 +1192,9 @@ namespace Basis.GameItem
                 }
             }
 
-            [Button(@"@""禁用所有的"" + " + nameof(prefabName) + "+" + nameof(prefabSuffixName))]
-            [TitleGroup(TEST_CATEGORY)]
+            [Button(@"@""禁用所有的"" + " + nameof(prefabName) + "+" + 
+                    nameof(prefabSuffixName))]
+            [HorizontalGroup(PREFABS_ACTIVE_STATE_SETTING_CATEGORY)]
             private void DisableAllPrefabsActiveState()
             {
                 foreach (var prefab in allGameItemPrefabs)
@@ -1261,11 +1320,11 @@ namespace Basis.GameItem
                     Note.note.Log($"准备加载{itemSettingCount}个{prefabName}{prefabSuffixName}");
                 }
 
+                GameItemPrefab.SetStaticGeneralSetting(this as TGeneralSetting);
+
                 int skipCardSettingCount = 0;
                 foreach (var prefab in allGameItemPrefabs)
                 {
-                    prefab.SetGeneralSetting(this as TGeneralSetting);
-
                     prefab.Init();
 
                     //try

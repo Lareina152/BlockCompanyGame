@@ -66,7 +66,7 @@ namespace Basis.GameItem
 
             public StringTranslation name => origin.name;
 
-            protected TGeneralSetting generalSetting => origin.GetGeneralSetting();
+            protected TGeneralSetting generalSetting => GameItemPrefab.GetStaticGeneralSetting();
 
             #region FishNet Properties
 

@@ -104,6 +104,19 @@ namespace Basis
 
         #region ScriptableObject
 
+        public static ScriptableObject FindScriptableObject(this Type type)
+        {
+            if (type.IsDerivedFrom<ScriptableObject>() == false)
+            {
+                Debug.LogWarning($"{type}不是{nameof(ScriptableObject)}的子类");
+                return default;
+            }
+
+            var result = type.FindAssetOfType() as ScriptableObject;
+
+            return result;
+        }
+
         public static ScriptableObject FindOrCreateScriptableObject(this Type type, 
             string newPath, string newName)
         {
@@ -114,7 +127,7 @@ namespace Basis
             }
 
             newPath.CreateDirectory();
-
+            
             var result = type.FindAssetOfType() as ScriptableObject;
 
             if (result == null)

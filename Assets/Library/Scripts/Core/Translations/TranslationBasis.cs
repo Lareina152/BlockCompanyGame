@@ -50,11 +50,6 @@ namespace Basis
 
         public const string ANY_LANGUAGE = "Any";
 
-        public static StringTranslation Empty = new()
-        {
-            { ANY_LANGUAGE, "" }
-        };
-
         protected override bool valueAlwaysPreviewed => true;
         protected override bool showPreviewValueBelow => false;
 
@@ -250,11 +245,6 @@ namespace Basis
 
         public static implicit operator StringTranslation(string content)
         {
-            if (content.IsNullOrEmpty())
-            {
-                return Empty;
-            }
-
             return new()
             {
                 { ANY_LANGUAGE, content }
