@@ -18,6 +18,8 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 6618245551763512385, guid: c380c11be7700824fa3f94f3f6519c60, type: 3}
     - {fileID: 5359133140118380892, guid: 3edd4835a7b07324f95aca613cf417d1, type: 3}
+    - {fileID: 8585182357577407529, guid: 7916399240575184388245e107853ec0, type: 3}
+    - {fileID: 8585182357577407529, guid: c2d438748d82cd8448e4d3e95fb3c423, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -175,7 +177,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 4
     - Name: 
       Entry: 7
       Data: 13|BlockPrefab, Assembly-CSharp
@@ -269,7 +271,7 @@ MonoBehaviour:
       Data: 19|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: "\u9884\u5236\u4F53"
+      Data: "\u6389\u843D\u7269"
     - Name: allTranslations
       Entry: 7
       Data: 20|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
@@ -285,7 +287,7 @@ MonoBehaviour:
       Data: Chinese
     - Name: translation
       Entry: 1
-      Data: "\u9884\u5236\u4F53"
+      Data: "\u6389\u843D\u7269"
     - Name: 
       Entry: 8
       Data: 
@@ -297,7 +299,7 @@ MonoBehaviour:
       Data: English
     - Name: translation
       Entry: 1
-      Data: Prefab
+      Data: Item Drop
     - Name: 
       Entry: 8
       Data: 
@@ -313,6 +315,167 @@ MonoBehaviour:
     - Name: prefab
       Entry: 10
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|BombPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: bomb
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 24|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u70B8\u5F39"
+    - Name: allTranslations
+      Entry: 7
+      Data: 25|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 26|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u70B8\u5F39"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 27|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Bomb
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: prefab
+      Entry: 10
+      Data: 2
+    - Name: cooldown
+      Entry: 4
+      Data: 3
+    - Name: explosionDestroyRadius
+      Entry: 4
+      Data: 1
+    - Name: explosionShockRadius
+      Entry: 4
+      Data: 3
+    - Name: shockStrength
+      Entry: 4
+      Data: 1000
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 28|BlackHolePrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: block_hole
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 29|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9ED1\u6D1E"
+    - Name: allTranslations
+      Entry: 7
+      Data: 30|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 31|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u9ED1\u6D1E"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 32|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: BlackHole
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: prefab
+      Entry: 10
+      Data: 3
+    - Name: gravitationalRadius
+      Entry: 4
+      Data: 7
+    - Name: centripetalForce
+      Entry: 4
+      Data: 20
+    - Name: gravitationalDirectionRandomAngleRange
+      Entry: 4
+      Data: 20
     - Name: 
       Entry: 8
       Data: 

@@ -19,16 +19,20 @@ public class Item :
         isUsed = false;
     }
 
-    public void Use()
+    public EntityController Use(Vector2 pos)
     {
         if (isUsed)
         {
             Note.note.Error("不可重复使用物品");
         }
 
+        var entityCtrl = EntityManager.Create(origin.entityId, pos);
+
         OnUse();
 
         isUsed = true;
+
+        return entityCtrl;
     }
 
     protected virtual void OnUse()
@@ -43,4 +47,10 @@ public class ItemPrefab :
     [LabelText("图标")]
     [Required]
     public Sprite icon;
+
+    [LabelText("使用后生成的实体")]
+    [ValueDropdown(
+        "@GameSetting.entityGeneralSetting.GetPrefabNameList()")]
+    [StringIsNotNullOrEmpty]
+    public string entityId;
 }

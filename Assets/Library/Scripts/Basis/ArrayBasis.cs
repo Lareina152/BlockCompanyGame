@@ -443,7 +443,7 @@ namespace Basis
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void DoFuncNTimes(this int n, Action func)
+        public static void DoActionNTimes(this int n, Action func)
         {
             for (int i = 0; i < n; i++)
             {
@@ -654,7 +654,7 @@ namespace Basis
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Add<T>(this ICollection<T> collection, [CanBeNull] T item, int count)
         {
-            count.DoFuncNTimes(() => { collection.Add(item); });
+            count.DoActionNTimes(() => { collection.Add(item); });
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

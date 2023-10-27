@@ -717,7 +717,7 @@ MonoBehaviour:
     - Name: icon
       Entry: 10
       Data: 0
-    - Name: blockEntityId
+    - Name: entityId
       Entry: 1
       Data: 2x2_block
     - Name: 

@@ -13,11 +13,32 @@ public class Entity :
 
     public EntityController controller { get; private set; }
 
+    public bool isDestroyed { get; private set; }
+
     public void InitEntity(EntityController controller)
     {
         this.controller = controller;
         
         Note.note.AssertIsNotNull(controller, nameof(controller));
+
+        OnInit();
+    }
+
+    protected virtual void OnInit()
+    {
+
+    }
+
+    public void Destroy()
+    {
+        OnDestroy();
+
+        isDestroyed = true;
+    }
+
+    protected virtual void OnDestroy()
+    {
+
     }
 }
 
