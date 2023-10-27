@@ -207,7 +207,7 @@ namespace Basis.GameItem
             [ShowInInspector]
             [HideInEditorMode]
             [JsonIgnore]
-            [HideIf(nameof(gameTypeAbandoned))]
+            //[HideIf(nameof(gameTypeAbandoned))]
             public IReadOnlyDictionary<string, GameType> gameTypesDict { get; private set; }
 
             [HideInInspector] [JsonIgnore] public GameType uniqueGameType;

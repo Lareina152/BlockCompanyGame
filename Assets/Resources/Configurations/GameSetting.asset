@@ -44,3 +44,5 @@ MonoBehaviour:
   uiPanelGeneralSetting: {fileID: 11400000, guid: 4bc770f7ebc07e5409ff4207b943d3f7, type: 2}
   debugUIPanelGeneralSetting: {fileID: 11400000, guid: 3c3a78260f8e89f47960c6c828c997a9, type: 2}
   cameraGeneralSetting: {fileID: 11400000, guid: 7aecbdb65115d724887c9174c50e640d, type: 2}
+  entityGeneralSetting: {fileID: 11400000, guid: 3be1f7ea46233654ab8c5a94c21fef1a, type: 2}
+  itemGeneralSetting: {fileID: 11400000, guid: 8a6c68952c4999c418ea5dfc1e63e00a, type: 2}

@@ -8,4 +8,10 @@ public class GameSetting : GameCoreSettingBase
 
     public static CameraGeneralSetting cameraGeneralSetting => 
         gameSettingFile.cameraGeneralSetting;
+
+    public static EntityGeneralSetting entityGeneralSetting => 
+        gameSettingFile.entityGeneralSetting;
+
+    public static ItemGeneralSetting itemGeneralSetting =>
+        gameSettingFile.itemGeneralSetting;
 }

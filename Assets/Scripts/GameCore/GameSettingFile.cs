@@ -11,4 +11,8 @@ public class GameSettingFile : GameCoreSettingBaseFile
     public override Type thisType => GetType();
 
     public CameraGeneralSetting cameraGeneralSetting;
+
+    public EntityGeneralSetting entityGeneralSetting;
+
+    public ItemGeneralSetting itemGeneralSetting;
 }
