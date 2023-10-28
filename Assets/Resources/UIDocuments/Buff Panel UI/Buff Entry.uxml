@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="DebugEntry" picking-mode="Ignore" style="flex-grow: initial; background-color: rgba(0, 0, 0, 0); align-self: flex-start; background-image: resource(&apos;Images/UI/Tooltip&apos;); padding-left: 25px; padding-right: 25px; padding-top: 25px; padding-bottom: 25px; flex-direction: row; align-items: center;">
-        <ui:Label tabindex="-1" text="00:00" display-tooltip-when-elided="true" name="Duration" picking-mode="Ignore" style="font-size: 30px; -unity-font-definition: resource(&apos;Fonts/VonwaonBitmap-12px SDF&apos;); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-font-style: bold; color: rgb(255, 239, 132);" />
-        <ui:VisualElement name="Icon" picking-mode="Ignore" style="flex-grow: 1; background-image: resource(&apos;Images/Items/道纹/二品/10&apos;); width: 80px; height: 80px;" />
-    </ui:VisualElement>
-</ui:UXML>

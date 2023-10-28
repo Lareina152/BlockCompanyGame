@@ -1,9 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Resources/UIDocuments/DefaultThemeStyle.uss?fileID=7433441132597879392&amp;guid=5caa165ed418a734b985147969ea699e&amp;type=3#DefaultThemeStyle" />
-    <Style src="project://database/Assets/Resources/UIDocuments/Input%20Mapping%20Options%20UI/Input%20Mapping%20Options%20Style.uss?fileID=7433441132597879392&amp;guid=7d5c6687df58a49439fd50a1ef1bcdb5&amp;type=3#Input Mapping Options Style" />
-    <ui:VisualElement picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); height: 80%; width: 80%; align-self: center; margin-top: 5%; background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/cailiao_msk&apos;);">
-        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
-            <ui:ScrollView name="InputMappingEntryContainer" mouse-wheel-scroll-size="1000" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

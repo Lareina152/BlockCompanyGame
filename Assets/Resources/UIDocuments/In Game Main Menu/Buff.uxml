@@ -1,3 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:VisualElement name="Buff" class="buff" style="background-image: url(&apos;project://database/Assets/Blink/Art/Icons/Classes/Elementalist/Arcanist/Arcanist1.png?fileID=2800000&amp;guid=4029a9cfeb86f134c9c5af05993eaac8&amp;type=3#Arcanist1&apos;);" />
-</ui:UXML>

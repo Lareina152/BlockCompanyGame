@@ -8,34 +8,36 @@ using UnityEngine;
 public class Item :
     SimpleGameItemBundle<ItemPrefab, ItemGeneralSetting, Item>.GameItem
 {
-    public Sprite icon => origin.icon;
+    public Sprite iconSprite => origin.icon;
 
-    protected bool isUsed = false;
+    public Texture2D iconTexture2D => origin.icon.texture;
+
+    protected bool hasPlaced = false;
 
     protected override void OnCreate()
     {
         base.OnCreate();
 
-        isUsed = false;
+        hasPlaced = false;
     }
 
-    public EntityController Use(Vector2 pos)
+    public EntityController Place(Vector2 pos)
     {
-        if (isUsed)
+        if (hasPlaced)
         {
             Note.note.Error("不可重复使用物品");
         }
 
         var entityCtrl = EntityManager.Create(origin.entityId, pos);
 
-        OnUse();
+        OnPlace();
 
-        isUsed = true;
+        hasPlaced = true;
 
         return entityCtrl;
     }
 
-    protected virtual void OnUse()
+    protected virtual void OnPlace()
     {
 
     }

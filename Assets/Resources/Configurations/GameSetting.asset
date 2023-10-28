@@ -46,3 +46,4 @@ MonoBehaviour:
   cameraGeneralSetting: {fileID: 11400000, guid: 7aecbdb65115d724887c9174c50e640d, type: 2}
   entityGeneralSetting: {fileID: 11400000, guid: 3be1f7ea46233654ab8c5a94c21fef1a, type: 2}
   itemGeneralSetting: {fileID: 11400000, guid: 8a6c68952c4999c418ea5dfc1e63e00a, type: 2}
+  stageGeneralSetting: {fileID: 11400000, guid: d9a8bc4a5157ff54dbbee36388cf6235, type: 2}

@@ -23,6 +23,8 @@ public class Bomb : Entity
     public float explosionShockRadius => origin.explosionShockRadius;
 
     public float shockStrength => origin.shockStrength;
+
+    public float explosionAnimationTime => origin.explosionAnimationTime;
 }
 
 public class BombPrefab : EntityPrefab
@@ -46,4 +48,8 @@ public class BombPrefab : EntityPrefab
     [LabelText("爆炸冲击强度")]
     [MinValue(0)]
     public float shockStrength = 10f;
+
+    [LabelText("爆炸动画时间")]
+    [MinValue(0)]
+    public float explosionAnimationTime = 0.3f;
 }

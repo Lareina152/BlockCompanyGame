@@ -18,6 +18,9 @@ public class BlackHoleController : GamePropertyController
     [ShowInInspector]
     private float gravitationalDirectionRandomAngleRange;
 
+    [ShowInInspector]
+    private float lifeTime;
+
     protected override void OnInit()
     {
         base.OnInit();
@@ -29,6 +32,21 @@ public class BlackHoleController : GamePropertyController
         gravitationalRadius = blackHole.gravitationalRadius;
         centripetalForce = blackHole.centripetalForce;
         gravitationalDirectionRandomAngleRange = blackHole.gravitationalDirectionRandomAngleRange;
+    }
+
+    private void Update()
+    {
+        if (initDone == false)
+        {
+            return;
+        }
+
+        lifeTime += Time.deltaTime;
+
+        if (lifeTime > blackHole.maxLifeTime)
+        {
+            RemoveEntity(this);
+        }
     }
 
     private void FixedUpdate()

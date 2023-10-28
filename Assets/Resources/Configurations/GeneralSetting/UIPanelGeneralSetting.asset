@@ -21,6 +21,9 @@ MonoBehaviour:
     - {fileID: 9197481963319205126, guid: 657de8b955e72a143860ce96758cdadc, type: 3}
     - {fileID: 9197481963319205126, guid: a27f4fd9f48bd8b4c8210ffd52852ecf, type: 3}
     - {fileID: 9197481963319205126, guid: 5945d911dee75684b939af5cac2cee31, type: 3}
+    - {fileID: 9197481963319205126, guid: e83a3e11e410fba4294d116ec09947aa, type: 3}
+    - {fileID: 2800000, guid: 684480ee9a9c7af4cb56361a793cd6cb, type: 3}
+    - {fileID: 2800000, guid: 46bb1707d4486fc4988bbcb38df9ac22, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -178,7 +181,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 13|DebugUIPanelPreset, Assembly-CSharp
@@ -896,6 +899,206 @@ MonoBehaviour:
     - Name: attributeContainerName
       Entry: 1
       Data: AttributeContainer
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 51|InGameMainUIPanelPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: in_game_main_ui
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 52|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: allTranslations
+      Entry: 7
+      Data: 53|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 54|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 55|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Prefab
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: sortingOrder
+      Entry: 3
+      Data: 0
+    - Name: isUnique
+      Entry: 5
+      Data: true
+    - Name: autoOpenOnCreation
+      Entry: 5
+      Data: false
+    - Name: globalEventDisabledListOnOpen
+      Entry: 7
+      Data: 56|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: globalEventDisabledListOnMouseEnter
+      Entry: 7
+      Data: 57|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: enableCloseInputMapping
+      Entry: 5
+      Data: false
+    - Name: closeInputMappingID
+      Entry: 6
+      Data: 
+    - Name: enableToggleInputMapping
+      Entry: 5
+      Data: false
+    - Name: toggleInputMappingID
+      Entry: 6
+      Data: 
+    - Name: autoOpenOnEnterProcedures
+      Entry: 7
+      Data: 58|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: autoOpenOnLeaveProcedures
+      Entry: 7
+      Data: 59|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: autoCloseOnEnterProcedures
+      Entry: 7
+      Data: 60|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: autoCloseOnLeaveProcedures
+      Entry: 7
+      Data: 61|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: visualTree
+      Entry: 10
+      Data: 5
+    - Name: useDefaultPanelSettings
+      Entry: 5
+      Data: true
+    - Name: customPanelSettings
+      Entry: 6
+      Data: 
+    - Name: ignoreMouseEvents
+      Entry: 5
+      Data: false
+    - Name: closeUIButtonName
+      Entry: 6
+      Data: 
+    - Name: tooltipBindConfigs
+      Entry: 7
+      Data: 62|System.Collections.Generic.List`1[[TooltipBindConfig, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: tooltipFadeDuration
+      Entry: 4
+      Data: 0.4
+    - Name: resetButtonName
+      Entry: 1
+      Data: ResetButton
+    - Name: resetButtonPressedIcon
+      Entry: 10
+      Data: 6
+    - Name: resetButtonReleasedIcon
+      Entry: 10
+      Data: 7
     - Name: 
       Entry: 8
       Data: 

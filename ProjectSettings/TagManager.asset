@@ -42,3 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 692560673
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 3999831599
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 3833431855
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 1535559683
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 2720730901
+    locked: 0
+  - name: Entity
+    uniqueID: 974769089
+    locked: 0

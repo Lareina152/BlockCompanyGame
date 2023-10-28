@@ -7,7 +7,16 @@ using UnityEngine;
 
 public class BombController : GamePropertyController
 {
+    private static readonly int IsBooming = Animator.StringToHash("isBooming");
+
     public Bomb bomb { get; private set; }
+
+    [Required]
+    [SerializeField]
+    private Animator animator;
+
+    [ShowInInspector]
+    private bool hasSetExplodedAnimation = false;
 
     [ShowInInspector]
     private float cooldown;
@@ -29,6 +38,13 @@ public class BombController : GamePropertyController
         }
 
         cooldown -= Time.deltaTime;
+
+        if (hasSetExplodedAnimation == false && cooldown < bomb.explosionAnimationTime)
+        {
+            animator.SetTrigger(IsBooming);
+
+            hasSetExplodedAnimation = true;
+        }
 
         if (cooldown < 0)
         {

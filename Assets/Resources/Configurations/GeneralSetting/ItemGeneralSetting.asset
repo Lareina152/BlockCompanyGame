@@ -16,7 +16,14 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 5e60805b9131ce9419ee71a802bf8b66, type: 3}
+    - {fileID: 21300000, guid: ee0713da687095748a208353aab810c3, type: 2}
+    - {fileID: 21300000, guid: ed58bd234f4a8064ab3924e30ae251db, type: 2}
+    - {fileID: 21300000, guid: bea4797b7dfc9d34481628823be3e333, type: 2}
+    - {fileID: 21300000, guid: 8cda4353b75b2fc438a0bb7ca6c20114, type: 2}
+    - {fileID: 21300000, guid: ac3018eda9eba1a4f84e22828b72efee, type: 2}
+    - {fileID: 21300000, guid: 070675a7d8f486849818b5b8eb53fc61, type: 2}
+    - {fileID: 21300000, guid: bd190efdc9f7fc248a4d85573a6d4c8f, type: 2}
+    - {fileID: 21300000, guid: fa59ac645ab29f04aa4fd2efdde93c04, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -174,13 +181,13 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 8
     - Name: 
       Entry: 7
-      Data: 13|BlockItemPrefab, Assembly-CSharp
+      Data: 13|GamePropertyItemPrefab, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: 2x2_block
+      Data: bomb_item
     - Name: isActive
       Entry: 5
       Data: true
@@ -203,8 +210,93 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
       Entry: 7
-      Data: 15|ItemBasis.GameType, Assembly-CSharp
+      Data: 15|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 
+    - Name: allTranslations
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 17|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Prefab
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 0
+    - Name: entityId
+      Entry: 1
+      Data: bomb
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: o_block_item
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 20|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 7
+      Data: 21|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: default_item_type
@@ -213,11 +305,11 @@ MonoBehaviour:
       Data: 7
     - Name: subtypes
       Entry: 7
-      Data: 16|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 22|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 17|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+      Data: 23|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -233,7 +325,7 @@ MonoBehaviour:
       Data: 
     - Name: parent
       Entry: 7
-      Data: 18|ItemBasis.GameType, Assembly-CSharp
+      Data: 24|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: item
@@ -242,11 +334,11 @@ MonoBehaviour:
       Data: 1
     - Name: subtypes
       Entry: 7
-      Data: 19|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 25|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 17
+      Data: 23
     - Name: 
       Entry: 12
       Data: 1
@@ -258,7 +350,7 @@ MonoBehaviour:
       Data: default_item_type
     - Name: $v
       Entry: 9
-      Data: 15
+      Data: 21
     - Name: 
       Entry: 8
       Data: 
@@ -270,19 +362,19 @@ MonoBehaviour:
       Data: 
     - Name: parent
       Entry: 7
-      Data: 20|ItemBasis.GameType, Assembly-CSharp
+      Data: 26|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: all
     - Name: name
       Entry: 7
-      Data: 21|Basis.StringTranslation, Assembly-CSharp
+      Data: 27|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: 
     - Name: allTranslations
       Entry: 7
-      Data: 22|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 28|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -298,11 +390,11 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 23|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 29|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 17
+      Data: 23
     - Name: 
       Entry: 12
       Data: 3
@@ -314,7 +406,7 @@ MonoBehaviour:
       Data: item
     - Name: $v
       Entry: 9
-      Data: 18
+      Data: 24
     - Name: 
       Entry: 8
       Data: 
@@ -326,26 +418,26 @@ MonoBehaviour:
       Data: extended_rule_tile
     - Name: $v
       Entry: 7
-      Data: 24|ItemBasis.GameType, Assembly-CSharp
+      Data: 30|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: extended_rule_tile
     - Name: name
       Entry: 7
-      Data: 25|Basis.StringTranslation, Assembly-CSharp
+      Data: 31|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: 
     - Name: allTranslations
       Entry: 7
-      Data: 26|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 32|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 27|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 33|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -357,7 +449,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 28|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 34|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
@@ -378,11 +470,11 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 29|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 35|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 17
+      Data: 23
     - Name: 
       Entry: 12
       Data: 1
@@ -394,26 +486,26 @@ MonoBehaviour:
       Data: default_extended_rule_tile_type
     - Name: $v
       Entry: 7
-      Data: 30|ItemBasis.GameType, Assembly-CSharp
+      Data: 36|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: default_extended_rule_tile_type
     - Name: name
       Entry: 7
-      Data: 31|Basis.StringTranslation, Assembly-CSharp
+      Data: 37|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: 
     - Name: allTranslations
       Entry: 7
-      Data: 32|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 38|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 33|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 39|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
@@ -425,7 +517,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 34|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 40|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -446,11 +538,11 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 35|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 41|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 17
+      Data: 23
     - Name: 
       Entry: 12
       Data: 0
@@ -462,7 +554,7 @@ MonoBehaviour:
       Data: 
     - Name: parent
       Entry: 9
-      Data: 24
+      Data: 30
     - Name: 
       Entry: 8
       Data: 
@@ -477,7 +569,7 @@ MonoBehaviour:
       Data: 
     - Name: parent
       Entry: 9
-      Data: 20
+      Data: 26
     - Name: 
       Entry: 8
       Data: 
@@ -492,26 +584,26 @@ MonoBehaviour:
       Data: property
     - Name: $v
       Entry: 7
-      Data: 36|ItemBasis.GameType, Assembly-CSharp
+      Data: 42|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: property
     - Name: name
       Entry: 7
-      Data: 37|Basis.StringTranslation, Assembly-CSharp
+      Data: 43|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: 
     - Name: allTranslations
       Entry: 7
-      Data: 38|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 44|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 39|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 45|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -523,7 +615,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 40|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 46|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
@@ -544,11 +636,11 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 41|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 47|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 17
+      Data: 23
     - Name: 
       Entry: 12
       Data: 1
@@ -560,26 +652,26 @@ MonoBehaviour:
       Data: default_property_type
     - Name: $v
       Entry: 7
-      Data: 42|ItemBasis.GameType, Assembly-CSharp
+      Data: 48|ItemBasis.GameType, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: default_property_type
     - Name: name
       Entry: 7
-      Data: 43|Basis.StringTranslation, Assembly-CSharp
+      Data: 49|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: 
     - Name: allTranslations
       Entry: 7
-      Data: 44|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 50|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 45|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 51|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
@@ -591,7 +683,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 46|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 52|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -612,11 +704,11 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 47|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
+      Data: 53|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[ItemBasis.GameType,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 17
+      Data: 23
     - Name: 
       Entry: 12
       Data: 0
@@ -628,7 +720,7 @@ MonoBehaviour:
       Data: 
     - Name: parent
       Entry: 9
-      Data: 36
+      Data: 42
     - Name: 
       Entry: 8
       Data: 
@@ -643,7 +735,7 @@ MonoBehaviour:
       Data: 
     - Name: parent
       Entry: 9
-      Data: 20
+      Data: 26
     - Name: 
       Entry: 8
       Data: 
@@ -670,38 +762,38 @@ MonoBehaviour:
       Data: 
     - Name: name
       Entry: 7
-      Data: 48|Basis.StringTranslation, Assembly-CSharp
+      Data: 54|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: 
+      Data: "2x2 \u65B9\u5757"
     - Name: allTranslations
       Entry: 7
-      Data: 49|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 55|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 50|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 56|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
     - Name: translation
       Entry: 1
-      Data: "2x2 \u65B9\u5757"
+      Data: "O\u578B\u65B9\u5757"
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 57|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
     - Name: translation
       Entry: 1
-      Data: 2x2 Block
+      Data: O Block
     - Name: 
       Entry: 8
       Data: 
@@ -716,10 +808,520 @@ MonoBehaviour:
       Data: 
     - Name: icon
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: entityId
       Entry: 1
-      Data: 2x2_block
+      Data: o_block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 58|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: i_block_item
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 59|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 60|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: allTranslations
+      Entry: 7
+      Data: 61|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 62|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "I\u578B\u65B9\u5757"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 63|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: I Block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 2
+    - Name: entityId
+      Entry: 1
+      Data: i_block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 64|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: j_block_item
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 65|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 66|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: allTranslations
+      Entry: 7
+      Data: 67|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 68|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "J\u578B\u65B9\u5757"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 69|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: J Block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 3
+    - Name: entityId
+      Entry: 1
+      Data: j_block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 70|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: l_block
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 71|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 72|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: allTranslations
+      Entry: 7
+      Data: 73|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 74|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "L\u578B\u65B9\u5757"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 75|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: L Block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 4
+    - Name: entityId
+      Entry: 1
+      Data: l_block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 76|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: s_block
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 77|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 78|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "S\u578B\u65B9\u5757"
+    - Name: allTranslations
+      Entry: 7
+      Data: 79|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 80|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "S\u578B\u65B9\u5757"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 81|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: S Block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 5
+    - Name: entityId
+      Entry: 1
+      Data: s_block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 82|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: t_block
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 83|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 84|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: allTranslations
+      Entry: 7
+      Data: 85|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 86|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "T\u578B\u65B9\u5757"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 87|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: T Block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 6
+    - Name: entityId
+      Entry: 1
+      Data: t_block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 88|BlockItemPrefab, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: z_block
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 7
+      Data: 89|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: default_item_type
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 90|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u9884\u5236\u4F53"
+    - Name: allTranslations
+      Entry: 7
+      Data: 91|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 92|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "Z\u578B\u65B9\u5757"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 93|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Z Block
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: icon
+      Entry: 10
+      Data: 7
+    - Name: entityId
+      Entry: 1
+      Data: z_block
     - Name: 
       Entry: 8
       Data: 

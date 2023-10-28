@@ -1,9 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement class="inputMappingEntry" style="background-color: rgba(0, 0, 0, 0);">
-        <ui:Label text="Label" name="InputMappingName" class="inputMappingName" />
-        <ui:VisualElement name="InputMappingButtonContainer" class="inputMappingButtonContainer" />
-        <ui:VisualElement name="inputMappingIconBackground" class="inputMappingIconBackground" style="background-color: rgba(0, 0, 0, 0);">
-            <ui:VisualElement name="InputMappingIcon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26bffc2800dd02b4897e3d9dd0571ed2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2414b2193bc241e4e845ccfb25b62f5d, type: 3}
   m_Name: StageGeneralSetting
   m_EditorClassIdentifier: 
   serializationData:
@@ -20,73 +20,8 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: typeBasicInfo
-      Entry: 7
-      Data: 0|GamePrefabCoreBundle`2+GameTypeBasicInfo[[StagePreset, Assembly-CSharp],[StageGeneralSetting,
-        Assembly-CSharp]], Assembly-CSharp
-    - Name: id
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 1|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: 
-    - Name: allTranslations
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: subtypes
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[GamePrefabCoreBundle`2+GameTypeBasicInfo[[StagePreset,
-        Assembly-CSharp],[StageGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: parentID
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: allGameItemPrefabs
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[StagePreset, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   useSpecificJsonFile: 0
   jsonFile: {fileID: 0}
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
-  defaultTypeID: 
-  isTypeIDUnique: 1
-  willShowPrefabOnWindowSide: 0

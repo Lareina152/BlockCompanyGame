@@ -22,6 +22,8 @@ public class BlackHole : Entity
 
     public float gravitationalDirectionRandomAngleRange => 
         origin.gravitationalDirectionRandomAngleRange;
+
+    public float maxLifeTime => origin.maxLifeTime;
 }
 
 public class BlackHolePrefab : EntityPrefab
@@ -41,4 +43,8 @@ public class BlackHolePrefab : EntityPrefab
     [LabelText("引力方向随机角度范围")]
     [PropertyRange(0, 90)]
     public float gravitationalDirectionRandomAngleRange = 0f;
+
+    [LabelText("最大生命周期")]
+    [MinValue(0)]
+    public float maxLifeTime = 7f;
 }

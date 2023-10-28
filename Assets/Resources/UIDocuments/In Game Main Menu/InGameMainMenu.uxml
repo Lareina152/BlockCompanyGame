@@ -1,45 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/UIDocuments/In%20Game%20Main%20Menu/InGameMainMenuStyle.uss?fileID=7433441132597879392&amp;guid=b749077420df312429cc984c99f5b58a&amp;type=3#InGameMainMenuStyle" />
     <ui:GroupBox name="Container" picking-mode="Ignore" style="position: relative; -unity-slice-scale: 5px; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-right: 3px;">
-        <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column-reverse;">
-            <ui:VisualElement picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); height: 150px;">
-                <ui:VisualElement style="width: 1000px; flex-direction: row; flex-wrap: wrap; background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/di_02&apos;); align-items: flex-end;">
-                    <ui:Button text="Button" display-tooltip-when-elided="true" name="CharacterProfileButton" focusable="false" style="justify-content: flex-end; width: 200px; height: 200px; background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/Tou_quan_di&apos;); background-color: rgba(188, 188, 188, 0); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; overflow: visible; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
-                        <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/Tou_quan_cs&apos;); height: 124%; position: absolute; width: 100%;" />
-                    </ui:Button>
-                    <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); height: 100%; flex-grow: 1; justify-content: flex-end; flex-direction: column-reverse;">
-                        <ui:VisualElement name="BarContainer" style="background-color: rgba(0, 0, 0, 0); margin-right: 50px;">
-                            <ui:ProgressBar value="73.5" name="HealthBar" title="100/1800" style="color: rgb(255, 204, 204);" />
-                            <ui:ProgressBar value="25.6" name="ManaBar" title="100/1800" style="color: rgb(255, 204, 204);" />
-                        </ui:VisualElement>
-                        <ui:VisualElement name="BuffQuickBar" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: column-reverse; width: 90%;">
-                            <ui:VisualElement name="DebuffContainer" />
-                            <ui:VisualElement name="BuffContainer" />
-                        </ui:VisualElement>
-                    </ui:VisualElement>
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); align-self: flex-end; flex-direction: column-reverse; align-items: flex-end; padding-right: 10px;">
-                <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); flex-direction: row-reverse;">
-                    <ui:Button display-tooltip-when-elided="true" focusable="false" name="OptionButton" class="menuButton" style="overflow: visible;">
-                        <ui:VisualElement class="menuButtonIcon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/quan_02_shezhi&apos;);" />
-                    </ui:Button>
-                    <ui:VisualElement name="OptionTooltip" picking-mode="Ignore" class="menuButtonTooltip" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: center; position: absolute; right: 100%; top: 0; bottom: 0;">
-                        <ui:Label tabindex="-1" text="Options" display-tooltip-when-elided="true" picking-mode="Ignore" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
-                <ui:VisualElement style="background-color: rgba(0, 0, 0, 0); flex-direction: row-reverse;">
-                    <ui:Button display-tooltip-when-elided="true" focusable="false" name="InventoryButton" class="menuButton" style="overflow: visible;">
-                        <ui:VisualElement class="menuButtonIcon" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: resource(&apos;Images/UI/In Game Menu/主界面/主界面HUD/di_qiankundai&apos;);" />
-                    </ui:Button>
-                    <ui:VisualElement name="InventoryTooltip" picking-mode="Ignore" class="menuButtonTooltip" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: center; position: absolute; right: 100%; top: 0; bottom: 0;">
-                        <ui:Label tabindex="-1" text="Inventory" display-tooltip-when-elided="true" picking-mode="Ignore" />
-                    </ui:VisualElement>
-                </ui:VisualElement>
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); height: 40px; padding-left: 50px; padding-right: 50px; margin-bottom: 10px; margin-top: 5px;">
-            <ui:ProgressBar value="65.4" title="100" name="ExpBar" />
-        </ui:VisualElement>
+        <ui:VisualElement name="ResetButton" style="flex-grow: 1; position: absolute; height: 108px; width: 263px; top: 58px; align-self: center; background-image: resource(&apos;Images/UI/UI_home_released&apos;);" />
     </ui:GroupBox>
 </ui:UXML>

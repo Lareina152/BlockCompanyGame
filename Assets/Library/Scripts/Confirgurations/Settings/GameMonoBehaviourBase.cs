@@ -16,6 +16,7 @@ public class MonoBehaviourBase : MonoBehaviour
     }
 }
 
+[DisallowMultipleComponent]
 public class UniqueMonoBehaviour<T> : SerializedMonoBehaviour where T : UniqueMonoBehaviour<T>
 {
     public static T instance;

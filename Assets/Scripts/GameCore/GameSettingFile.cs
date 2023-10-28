@@ -15,4 +15,6 @@ public class GameSettingFile : GameCoreSettingBaseFile
     public EntityGeneralSetting entityGeneralSetting;
 
     public ItemGeneralSetting itemGeneralSetting;
+
+    public StageGeneralSetting stageGeneralSetting;
 }

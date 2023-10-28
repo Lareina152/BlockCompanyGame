@@ -14,7 +14,8 @@ using UnityEngine;
 [Serializable]
 [HideDuplicateReferenceBox]
 [HideReferenceObjectPicker]
-public class PrefabIDSetter<TPrefab, TGeneralSetting> : ObjectChooser<PrefabIDSetter<TPrefab, TGeneralSetting>.PrefabID>
+public class PrefabIDSetter<TPrefab, TGeneralSetting> : 
+    ObjectChooser<PrefabIDSetter<TPrefab, TGeneralSetting>.PrefabID>
 where TPrefab : GamePrefabCoreBundle<TPrefab, TGeneralSetting>.GameItemPrefab
 where TGeneralSetting : GamePrefabCoreBundle<TPrefab, TGeneralSetting>.GameItemGeneralSetting
 {

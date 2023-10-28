@@ -1,8 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Button display-tooltip-when-elided="true" focusable="true" name="Slot" class="slotBackground" style="border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); -unity-font: resource(&apos;Fonts/m5x7&apos;); -unity-font-style: normal; visibility: visible; -unity-font-definition: resource(&apos;Fonts/VonwaonBitmap-12px SDF&apos;); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
-        <ui:VisualElement name="Border" class="slotBorder" style="flex-grow: 1;">
-            <ui:VisualElement name="Icon" class="slotIcon" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1;" />
-            <ui:Label tabindex="-1" text="64" display-tooltip-when-elided="true" name="Count" class="slotCount" style="position: absolute; bottom: 0; right: 0; -unity-font: resource(&apos;Fonts/VonwaonBitmap-12px&apos;); -unity-text-align: middle-right;" />
-        </ui:VisualElement>
-    </ui:Button>
-</ui:UXML>

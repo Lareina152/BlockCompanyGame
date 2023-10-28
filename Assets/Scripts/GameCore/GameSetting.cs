@@ -14,4 +14,7 @@ public class GameSetting : GameCoreSettingBase
 
     public static ItemGeneralSetting itemGeneralSetting =>
         gameSettingFile.itemGeneralSetting;
+
+    public static StageGeneralSetting stageGeneralSetting => 
+        gameSettingFile.stageGeneralSetting;
 }
