@@ -16,8 +16,11 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 3042003392344993736, guid: 607c5d21639953946b57f5b61ba2125a, type: 3}
-    - {fileID: 7343148159859676677, guid: 031a35a321b6b81438089296f0512e04, type: 3}
+    - {fileID: 5021498049392147679, guid: 88e1f49cb855b234e8ce8389679446e9, type: 3}
+    - {fileID: 2378784248902955463, guid: bf80508c4a5b34f4f869b01e3e89ff20, type: 3}
+    - {fileID: 2356589111213858224, guid: 0fbefcceb27fb4440923950da4f7492f, type: 3}
+    - {fileID: 1399920255592735757, guid: 9be47253605cfc64193ccdb38b3c2ecc, type: 3}
+    - {fileID: 882618537694505276, guid: 3de8a41e7f80b61458461117936ab546, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -25,8 +28,8 @@ MonoBehaviour:
     SerializationNodes:
     - Name: typeBasicInfo
       Entry: 7
-      Data: 0|GamePrefabCoreBundle`1+GameTypeBasicInfo[[RegisteredParticle, Assembly-CSharp]],
-        Assembly-CSharp
+      Data: 0|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[RegisteredParticle,
+        Assembly-CSharp],[ParticleSpawnerGeneralSetting, Assembly-CSharp]], Assembly-CSharp
     - Name: id
       Entry: 1
       Data: registered_particle_system
@@ -78,15 +81,16 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[GamePrefabCoreBundle`1+GameTypeBasicInfo[[RegisteredParticle,
-        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+      Data: 5|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[RegisteredParticle,
+        Assembly-CSharp],[ParticleSpawnerGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|GamePrefabCoreBundle`1+GameTypeBasicInfo[[RegisteredParticle, Assembly-CSharp]],
-        Assembly-CSharp
+      Data: 6|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[RegisteredParticle,
+        Assembly-CSharp],[ParticleSpawnerGeneralSetting, Assembly-CSharp]], Assembly-CSharp
     - Name: id
       Entry: 1
       Data: default_registered_particle_system_type
@@ -138,8 +142,9 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[GamePrefabCoreBundle`1+GameTypeBasicInfo[[RegisteredParticle,
-        Assembly-CSharp]], Assembly-CSharp]], mscorlib
+      Data: 11|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[RegisteredParticle,
+        Assembly-CSharp],[ParticleSpawnerGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -173,25 +178,31 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 5
     - Name: 
       Entry: 7
       Data: 13|RegisteredParticle, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: pixel_destroy
+      Data: player_place
     - Name: isActive
       Entry: 5
       Data: true
     - Name: isDebugging
       Entry: 5
       Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
     - Name: name
       Entry: 7
       Data: 14|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: "\u50CF\u7D20\u7834\u788E"
+      Data: "\u73A9\u5BB6\u653E\u7F6E\u7C92\u5B50"
     - Name: allTranslations
       Entry: 7
       Data: 15|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
@@ -207,7 +218,7 @@ MonoBehaviour:
       Data: Chinese
     - Name: translation
       Entry: 1
-      Data: "\u50CF\u7D20\u7834\u788E"
+      Data: "\u73A9\u5BB6\u653E\u7F6E\u7C92\u5B50"
     - Name: 
       Entry: 8
       Data: 
@@ -219,7 +230,7 @@ MonoBehaviour:
       Data: English
     - Name: translation
       Entry: 1
-      Data: Pixel Destroy
+      Data: Player Place Particle
     - Name: 
       Entry: 8
       Data: 
@@ -232,12 +243,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: gameType
-      Entry: 6
-      Data: 
-    - Name: gameTypeID
-      Entry: 1
-      Data: default_registered_particle_system_type
     - Name: particlePrefab
       Entry: 10
       Data: 0
@@ -249,19 +254,19 @@ MonoBehaviour:
       Data: 18|ConfigurationBasis.FloatSetter, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: '[3.0, 5.0]'
+      Data: 1.0
     - Name: isRandomValue
       Entry: 5
-      Data: true
+      Data: false
     - Name: fixedType
       Entry: 1
       Data: Single Value
     - Name: value
       Entry: 4
-      Data: 3
+      Data: 1
     - Name: randomType
       Entry: 1
-      Data: Range
+      Data: Weighted Select
     - Name: valueProbabilities
       Entry: 7
       Data: 19|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+ProbabilityItem[[System.Single,
@@ -299,10 +304,10 @@ MonoBehaviour:
       Data: 21|Basis.RangeFloat, Assembly-CSharp
     - Name: minPos
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: maxPos
       Entry: 4
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -339,19 +344,25 @@ MonoBehaviour:
       Data: 23|RegisteredParticle, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: pixel_explosion
+      Data: black_hole
     - Name: isActive
       Entry: 5
       Data: true
     - Name: isDebugging
       Entry: 5
       Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
     - Name: name
       Entry: 7
       Data: 24|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: "\u7C92\u5B50\u7206\u70B8"
+      Data: "\u9ED1\u6D1E\u7C92\u5B50"
     - Name: allTranslations
       Entry: 7
       Data: 25|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
@@ -367,7 +378,7 @@ MonoBehaviour:
       Data: Chinese
     - Name: translation
       Entry: 1
-      Data: "\u7C92\u5B50\u7206\u70B8"
+      Data: "\u9ED1\u6D1E\u7C92\u5B50"
     - Name: 
       Entry: 8
       Data: 
@@ -379,7 +390,7 @@ MonoBehaviour:
       Data: English
     - Name: translation
       Entry: 1
-      Data: Pixel Explosion
+      Data: Black Hole Particle
     - Name: 
       Entry: 8
       Data: 
@@ -392,12 +403,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: gameType
-      Entry: 6
-      Data: 
-    - Name: gameTypeID
-      Entry: 1
-      Data: default_registered_particle_system_type
     - Name: particlePrefab
       Entry: 10
       Data: 1
@@ -409,19 +414,19 @@ MonoBehaviour:
       Data: 28|ConfigurationBasis.FloatSetter, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: '[1.0, 3.0]'
+      Data: 8.0
     - Name: isRandomValue
       Entry: 5
-      Data: true
+      Data: false
     - Name: fixedType
       Entry: 1
       Data: Single Value
     - Name: value
       Entry: 4
-      Data: 0
+      Data: 8
     - Name: randomType
       Entry: 1
-      Data: Range
+      Data: Weighted Select
     - Name: valueProbabilities
       Entry: 7
       Data: 29|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+ProbabilityItem[[System.Single,
@@ -459,10 +464,10 @@ MonoBehaviour:
       Data: 31|Basis.RangeFloat, Assembly-CSharp
     - Name: minPos
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: maxPos
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -495,6 +500,450 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 33|RegisteredParticle, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: bomb_ready
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 34|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Bomb Ready
+    - Name: allTranslations
+      Entry: 7
+      Data: 35|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 36|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Bomb Ready
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: particlePrefab
+      Entry: 10
+      Data: 2
+    - Name: enableDurationLimitation
+      Entry: 5
+      Data: true
+    - Name: duration
+      Entry: 7
+      Data: 37|ConfigurationBasis.FloatSetter, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 1.0
+    - Name: isRandomValue
+      Entry: 5
+      Data: false
+    - Name: fixedType
+      Entry: 1
+      Data: Single Value
+    - Name: value
+      Entry: 4
+      Data: 1
+    - Name: randomType
+      Entry: 1
+      Data: Weighted Select
+    - Name: valueProbabilities
+      Entry: 7
+      Data: 38|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+ProbabilityItem[[System.Single,
+        mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: startCircularIndex
+      Entry: 3
+      Data: 0
+    - Name: pingPong
+      Entry: 5
+      Data: false
+    - Name: circularItems
+      Entry: 7
+      Data: 39|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+CircularItem[[System.Single,
+        mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: rangeValue
+      Entry: 7
+      Data: 40|Basis.RangeFloat, Assembly-CSharp
+    - Name: minPos
+      Entry: 4
+      Data: 0
+    - Name: maxPos
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultValue
+      Entry: 4
+      Data: 0
+    - Name: interpolationPower
+      Entry: 4
+      Data: 1
+    - Name: lerpPoints
+      Entry: 7
+      Data: 41|System.Collections.Generic.List`1[[ConfigurationBasis.NumberOrVectorChooser`2+LerpPoint[[System.Single,
+        mscorlib],[Basis.RangeFloat, Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: decimalPlaces
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 42|RegisteredParticle, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: bomb_boom
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 43|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Bomb Boom
+    - Name: allTranslations
+      Entry: 7
+      Data: 44|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 45|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Bomb Boom
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: particlePrefab
+      Entry: 10
+      Data: 3
+    - Name: enableDurationLimitation
+      Entry: 5
+      Data: true
+    - Name: duration
+      Entry: 7
+      Data: 46|ConfigurationBasis.FloatSetter, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 1.5
+    - Name: isRandomValue
+      Entry: 5
+      Data: false
+    - Name: fixedType
+      Entry: 1
+      Data: Single Value
+    - Name: value
+      Entry: 4
+      Data: 1.5
+    - Name: randomType
+      Entry: 1
+      Data: Weighted Select
+    - Name: valueProbabilities
+      Entry: 7
+      Data: 47|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+ProbabilityItem[[System.Single,
+        mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: startCircularIndex
+      Entry: 3
+      Data: 0
+    - Name: pingPong
+      Entry: 5
+      Data: false
+    - Name: circularItems
+      Entry: 7
+      Data: 48|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+CircularItem[[System.Single,
+        mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: rangeValue
+      Entry: 7
+      Data: 49|Basis.RangeFloat, Assembly-CSharp
+    - Name: minPos
+      Entry: 4
+      Data: 0
+    - Name: maxPos
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultValue
+      Entry: 4
+      Data: 0
+    - Name: interpolationPower
+      Entry: 4
+      Data: 1
+    - Name: lerpPoints
+      Entry: 7
+      Data: 50|System.Collections.Generic.List`1[[ConfigurationBasis.NumberOrVectorChooser`2+LerpPoint[[System.Single,
+        mscorlib],[Basis.RangeFloat, Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: decimalPlaces
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 51|RegisteredParticle, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: bomb_bird
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 52|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Bomb Bird
+    - Name: allTranslations
+      Entry: 7
+      Data: 53|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 54|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Bomb Bird
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: particlePrefab
+      Entry: 10
+      Data: 4
+    - Name: enableDurationLimitation
+      Entry: 5
+      Data: true
+    - Name: duration
+      Entry: 7
+      Data: 55|ConfigurationBasis.FloatSetter, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 5.0
+    - Name: isRandomValue
+      Entry: 5
+      Data: false
+    - Name: fixedType
+      Entry: 1
+      Data: Single Value
+    - Name: value
+      Entry: 4
+      Data: 5
+    - Name: randomType
+      Entry: 1
+      Data: Weighted Select
+    - Name: valueProbabilities
+      Entry: 7
+      Data: 56|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+ProbabilityItem[[System.Single,
+        mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: startCircularIndex
+      Entry: 3
+      Data: 0
+    - Name: pingPong
+      Entry: 5
+      Data: false
+    - Name: circularItems
+      Entry: 7
+      Data: 57|System.Collections.Generic.List`1[[ConfigurationBasis.ObjectChooser`1+CircularItem[[System.Single,
+        mscorlib]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: rangeValue
+      Entry: 7
+      Data: 58|Basis.RangeFloat, Assembly-CSharp
+    - Name: minPos
+      Entry: 4
+      Data: 0
+    - Name: maxPos
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: defaultValue
+      Entry: 4
+      Data: 0
+    - Name: interpolationPower
+      Entry: 4
+      Data: 1
+    - Name: lerpPoints
+      Entry: 7
+      Data: 59|System.Collections.Generic.List`1[[ConfigurationBasis.NumberOrVectorChooser`2+LerpPoint[[System.Single,
+        mscorlib],[Basis.RangeFloat, Assembly-CSharp]], Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: decimalPlaces
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -504,6 +953,8 @@ MonoBehaviour:
   jsonFile: {fileID: 0}
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
+  defaultTypeID: default_registered_particle_system_type
+  isTypeIDUnique: 1
   willShowPrefabOnWindowSide: 0
   container:
     containerID: ParticleContainer

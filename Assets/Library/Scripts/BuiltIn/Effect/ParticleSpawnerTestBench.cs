@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -12,7 +12,7 @@ public class ParticleSpawnerTestBench : MonoBehaviour
     [Button(nameof(Spawn))]
     public void Spawn()
     {
-        ParticleSpawner.SpawnParticle(id, pos);
+        ParticleSpawner.Spawn(id, pos);
     }
 
     public Sprite sprite;
@@ -20,7 +20,7 @@ public class ParticleSpawnerTestBench : MonoBehaviour
     [Button(nameof(SpawnPixelDestroy))]
     public void SpawnPixelDestroy()
     {
-        ParticleSpawner.SpawnPixelDestroyParticle(pos, sprite);
+        //ParticleSpawner.SpawnPixelDestroyParticle(pos, sprite);
     }
 
 }

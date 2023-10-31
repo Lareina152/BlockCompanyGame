@@ -35,4 +35,9 @@ public static class GizmosExt
         Gizmos.DrawWireCube(Vector3.zero, size);
         Gizmos.matrix = Matrix4x4.identity;
     }
+
+    public static void DrawWireRect(Vector2 center, Vector2 size)
+    {
+        Gizmos.DrawWireCube(center, size);
+    }
 }

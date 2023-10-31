@@ -16,6 +16,7 @@ public enum ManagerType
     NetworkCore,
     TestingCore,
     EnvironmentCore,
+    VFXCore,
     OtherCore
 }
 

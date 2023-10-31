@@ -1,0 +1,3 @@
+rep "GameJam23@ggj-hexagon@cloud.cn"
+  path "/"
+    smartbranch "/main"

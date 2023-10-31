@@ -650,10 +650,7 @@ MonoBehaviour:
       Data: 38|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: player_movement
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -925,7 +922,7 @@ MonoBehaviour:
       Data: 52|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: "\u9884\u5236\u4F53"
+      Data: "\u6E38\u620F\u5185\u4E3BUI"
     - Name: allTranslations
       Entry: 7
       Data: 53|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
@@ -941,7 +938,7 @@ MonoBehaviour:
       Data: Chinese
     - Name: translation
       Entry: 1
-      Data: "\u9884\u5236\u4F53"
+      Data: "\u6E38\u620F\u5185\u4E3BUI"
     - Name: 
       Entry: 8
       Data: 
@@ -953,7 +950,7 @@ MonoBehaviour:
       Data: English
     - Name: translation
       Entry: 1
-      Data: Prefab
+      Data: In Game Main UI
     - Name: 
       Entry: 8
       Data: 
@@ -1016,7 +1013,10 @@ MonoBehaviour:
       Data: 58|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: main_menu_procedure
     - Name: 
       Entry: 13
       Data: 
@@ -1099,6 +1099,12 @@ MonoBehaviour:
     - Name: resetButtonReleasedIcon
       Entry: 10
       Data: 7
+    - Name: leftPlayerItemPanelName
+      Entry: 1
+      Data: LeftPlayerItem
+    - Name: rightPlayerItemPanelName
+      Entry: 1
+      Data: RightPlayerItem
     - Name: 
       Entry: 8
       Data: 

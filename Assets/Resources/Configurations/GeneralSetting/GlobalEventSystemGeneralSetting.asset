@@ -23,8 +23,8 @@ MonoBehaviour:
     SerializationNodes:
     - Name: typeBasicInfo
       Entry: 7
-      Data: 0|GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig, Assembly-CSharp],[GlobalEventSystemGeneralSetting,
-        Assembly-CSharp]], Assembly-CSharp
+      Data: 0|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig,
+        Assembly-CSharp],[GlobalEventSystemGeneralSetting, Assembly-CSharp]], Assembly-CSharp
     - Name: id
       Entry: 1
       Data: global_event
@@ -76,7 +76,7 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig,
+      Data: 5|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig,
         Assembly-CSharp],[GlobalEventSystemGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
         mscorlib
     - Name: 
@@ -84,8 +84,8 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig, Assembly-CSharp],[GlobalEventSystemGeneralSetting,
-        Assembly-CSharp]], Assembly-CSharp
+      Data: 6|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig,
+        Assembly-CSharp],[GlobalEventSystemGeneralSetting, Assembly-CSharp]], Assembly-CSharp
     - Name: id
       Entry: 1
       Data: default_global_event_type
@@ -137,7 +137,7 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig,
+      Data: 11|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[GlobalEventConfig,
         Assembly-CSharp],[GlobalEventSystemGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
         mscorlib
     - Name: 
@@ -173,13 +173,13 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 9
+      Data: 7
     - Name: 
       Entry: 7
       Data: 13|InputEventConfigOfFloatArg, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: player_movement
+      Data: left_player_horizontal_movement
     - Name: isActive
       Entry: 5
       Data: true
@@ -197,7 +197,7 @@ MonoBehaviour:
       Data: 14|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
-      Data: "\u73A9\u5BB6\u79FB\u52A8"
+      Data: "\u5DE6\u73A9\u5BB6\u6C34\u5E73\u79FB\u52A8"
     - Name: allTranslations
       Entry: 7
       Data: 15|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
@@ -213,7 +213,7 @@ MonoBehaviour:
       Data: Chinese
     - Name: translation
       Entry: 1
-      Data: "\u73A9\u5BB6\u79FB\u52A8"
+      Data: "\u5DE6\u73A9\u5BB6\u6C34\u5E73\u79FB\u52A8"
     - Name: 
       Entry: 8
       Data: 
@@ -225,7 +225,7 @@ MonoBehaviour:
       Data: English
     - Name: translation
       Entry: 1
-      Data: Player Movement
+      Data: Left Player Horizontal Movement
     - Name: 
       Entry: 8
       Data: 
@@ -243,16 +243,16 @@ MonoBehaviour:
       Data: true
     - Name: enableTriggerEvent
       Entry: 5
-      Data: true
+      Data: false
     - Name: triggerDuration
       Entry: 4
-      Data: 0.1
+      Data: 0.2
     - Name: triggerEventInvokeTrueOnce
       Entry: 5
       Data: false
     - Name: requireMouseInScreen
       Entry: 5
-      Data: false
+      Data: true
     - Name: isFloatFromAxis
       Entry: 5
       Data: false
@@ -265,7 +265,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 19|InputActionGroup, Assembly-CSharp
@@ -316,11 +316,174 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: floatNegativeActionGroups
       Entry: 7
-      Data: 22|InputActionGroup, Assembly-CSharp
+      Data: 22|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 23|InputActionGroup, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+      Data: 24|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 97
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 0
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0
+    - Name: runtimeData
+      Entry: 7
+      Data: 25|InputActionRuntimeData, Assembly-CSharp
+    - Name: heldTime
+      Entry: 4
+      Data: 0
+    - Name: hasTriggeredHoldDown
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 26|InputEventConfigOfFloatArg, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: right_player_horizontal_movement
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 27|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u53F3\u73A9\u5BB6\u6C34\u5E73\u79FB\u52A8"
+    - Name: allTranslations
+      Entry: 7
+      Data: 28|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 29|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u53F3\u73A9\u5BB6\u6C34\u5E73\u79FB\u52A8"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 30|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Right Player Horizontal Movement
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requireUpdate
+      Entry: 5
+      Data: true
+    - Name: enableTriggerEvent
+      Entry: 5
+      Data: false
+    - Name: triggerDuration
+      Entry: 4
+      Data: 0.2
+    - Name: triggerEventInvokeTrueOnce
+      Entry: 5
+      Data: false
+    - Name: requireMouseInScreen
+      Entry: 5
+      Data: true
+    - Name: isFloatFromAxis
+      Entry: 5
+      Data: false
+    - Name: floatInputAxisType
+      Entry: 3
+      Data: 0
+    - Name: floatPositiveActionGroups
+      Entry: 7
+      Data: 31|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 32|InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 33|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -342,7 +505,7 @@ MonoBehaviour:
       Data: 0
     - Name: runtimeData
       Entry: 7
-      Data: 24|InputActionRuntimeData, Assembly-CSharp
+      Data: 34|InputActionRuntimeData, Assembly-CSharp
     - Name: heldTime
       Entry: 4
       Data: 0
@@ -372,66 +535,17 @@ MonoBehaviour:
       Data: 
     - Name: floatNegativeActionGroups
       Entry: 7
-      Data: 25|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 26|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 27|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+      Data: 35|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 97
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 0
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 7
-      Data: 28|InputActionRuntimeData, Assembly-CSharp
-    - Name: heldTime
-      Entry: 4
-      Data: 0
-    - Name: hasTriggeredHoldDown
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 29|InputActionGroup, Assembly-CSharp
+      Data: 36|InputActionGroup, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 30|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+      Data: 37|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -453,7 +567,7 @@ MonoBehaviour:
       Data: 0
     - Name: runtimeData
       Entry: 7
-      Data: 31|InputActionRuntimeData, Assembly-CSharp
+      Data: 38|InputActionRuntimeData, Assembly-CSharp
     - Name: heldTime
       Entry: 4
       Data: 0
@@ -486,7 +600,632 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 32|InputEventConfigOfBoolArg, Assembly-CSharp
+      Data: 39|InputEventConfigOfBoolArg, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: left_player_jump
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 40|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u5DE6\u73A9\u5BB6\u8DF3\u8DC3"
+    - Name: allTranslations
+      Entry: 7
+      Data: 41|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 42|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u5DE6\u73A9\u5BB6\u8DF3\u8DC3"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 43|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Left Player Jump
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requireUpdate
+      Entry: 5
+      Data: true
+    - Name: enableTriggerEvent
+      Entry: 5
+      Data: false
+    - Name: triggerDuration
+      Entry: 4
+      Data: 0.2
+    - Name: triggerEventInvokeTrueOnce
+      Entry: 5
+      Data: false
+    - Name: requireMouseInScreen
+      Entry: 5
+      Data: true
+    - Name: boolActionGroups
+      Entry: 7
+      Data: 44|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 45|InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 46|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 32
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 1
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0
+    - Name: runtimeData
+      Entry: 7
+      Data: 47|InputActionRuntimeData, Assembly-CSharp
+    - Name: heldTime
+      Entry: 4
+      Data: 0
+    - Name: hasTriggeredHoldDown
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 48|InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 49|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 119
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 1
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0
+    - Name: runtimeData
+      Entry: 7
+      Data: 50|InputActionRuntimeData, Assembly-CSharp
+    - Name: heldTime
+      Entry: 4
+      Data: 0
+    - Name: hasTriggeredHoldDown
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 51|InputEventConfigOfBoolArg, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: right_player_jump
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 52|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u53F3\u73A9\u5BB6\u8DF3\u8DC3"
+    - Name: allTranslations
+      Entry: 7
+      Data: 53|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 54|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u53F3\u73A9\u5BB6\u8DF3\u8DC3"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 55|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Right Player Jump
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requireUpdate
+      Entry: 5
+      Data: true
+    - Name: enableTriggerEvent
+      Entry: 5
+      Data: false
+    - Name: triggerDuration
+      Entry: 4
+      Data: 0.2
+    - Name: triggerEventInvokeTrueOnce
+      Entry: 5
+      Data: false
+    - Name: requireMouseInScreen
+      Entry: 5
+      Data: true
+    - Name: boolActionGroups
+      Entry: 7
+      Data: 56|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 57|InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 58|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 273
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 1
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0
+    - Name: runtimeData
+      Entry: 7
+      Data: 59|InputActionRuntimeData, Assembly-CSharp
+    - Name: heldTime
+      Entry: 4
+      Data: 0
+    - Name: hasTriggeredHoldDown
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 60|InputEventConfigOfBoolArg, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: left_player_place_item
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 61|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u5DE6\u73A9\u5BB6\u653E\u7F6E\u7269\u54C1"
+    - Name: allTranslations
+      Entry: 7
+      Data: 62|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 63|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u5DE6\u73A9\u5BB6\u653E\u7F6E\u7269\u54C1"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 64|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Left Player Place Item
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requireUpdate
+      Entry: 5
+      Data: true
+    - Name: enableTriggerEvent
+      Entry: 5
+      Data: false
+    - Name: triggerDuration
+      Entry: 4
+      Data: 0.2
+    - Name: triggerEventInvokeTrueOnce
+      Entry: 5
+      Data: false
+    - Name: requireMouseInScreen
+      Entry: 5
+      Data: true
+    - Name: boolActionGroups
+      Entry: 7
+      Data: 65|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 66|InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 67|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 115
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 1
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0
+    - Name: runtimeData
+      Entry: 7
+      Data: 68|InputActionRuntimeData, Assembly-CSharp
+    - Name: heldTime
+      Entry: 4
+      Data: 0
+    - Name: hasTriggeredHoldDown
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 69|InputEventConfigOfBoolArg, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: right_player_place_item
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 70|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: "\u53F3\u73A9\u5BB6\u653E\u7F6E\u7269\u54C1"
+    - Name: allTranslations
+      Entry: 7
+      Data: 71|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 72|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u53F3\u73A9\u5BB6\u653E\u7F6E\u7269\u54C1"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 73|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Right Player Place Item
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: requireUpdate
+      Entry: 5
+      Data: true
+    - Name: enableTriggerEvent
+      Entry: 5
+      Data: false
+    - Name: triggerDuration
+      Entry: 4
+      Data: 0.2
+    - Name: triggerEventInvokeTrueOnce
+      Entry: 5
+      Data: false
+    - Name: requireMouseInScreen
+      Entry: 5
+      Data: true
+    - Name: boolActionGroups
+      Entry: 7
+      Data: 74|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 75|InputActionGroup, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 76|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: InputAction, Assembly-CSharp
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: keyCode
+      Entry: 3
+      Data: 274
+    - Name: keyBoardTriggerType
+      Entry: 3
+      Data: 1
+    - Name: holdThreshold
+      Entry: 4
+      Data: 0
+    - Name: runtimeData
+      Entry: 7
+      Data: 77|InputActionRuntimeData, Assembly-CSharp
+    - Name: heldTime
+      Entry: 4
+      Data: 0
+    - Name: hasTriggeredHoldDown
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 78|InputEventConfigOfBoolArg, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: toggle_debug_ui
@@ -504,20 +1243,20 @@ MonoBehaviour:
       Data: 
     - Name: name
       Entry: 7
-      Data: 33|Basis.StringTranslation, Assembly-CSharp
+      Data: 79|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: "\u5F00\u5173Debug\u9762\u677F"
     - Name: allTranslations
       Entry: 7
-      Data: 34|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 80|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 35|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 81|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -529,7 +1268,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 82|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
@@ -565,17 +1304,17 @@ MonoBehaviour:
       Data: true
     - Name: boolActionGroups
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
+      Data: 83|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 38|InputActionGroup, Assembly-CSharp
+      Data: 84|InputActionGroup, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 39|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
+      Data: 85|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -620,932 +1359,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 40|InputEventConfigOfBoolArg, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: close_container_ui
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 41|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u5173\u95ED\u5BB9\u5668UI"
-    - Name: allTranslations
-      Entry: 7
-      Data: 42|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 43|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u5173\u95ED\u5BB9\u5668UI"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 44|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Close Container UI
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: true
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: false
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: requireMouseInScreen
-      Entry: 5
-      Data: true
-    - Name: boolActionGroups
-      Entry: 7
-      Data: 45|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 46|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 47|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 101
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 1
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 48|InputEventConfigOfFloatArg, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: inventory_item_selection
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 49|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u7269\u54C1\u680F\u7269\u54C1\u9009\u62E9"
-    - Name: allTranslations
-      Entry: 7
-      Data: 50|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 51|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u7269\u54C1\u680F\u7269\u54C1\u9009\u62E9"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 52|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Inventory Item Selection
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: true
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: false
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: requireMouseInScreen
-      Entry: 5
-      Data: true
-    - Name: isFloatFromAxis
-      Entry: 5
-      Data: true
-    - Name: floatInputAxisType
-      Entry: 3
-      Data: 0
-    - Name: floatPositiveActionGroups
-      Entry: 7
-      Data: 53|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: floatNegativeActionGroups
-      Entry: 7
-      Data: 54|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 55|InputEventConfigOfBoolArg, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: player_attack
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 56|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u73A9\u5BB6\u653B\u51FB"
-    - Name: allTranslations
-      Entry: 7
-      Data: 57|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 58|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u73A9\u5BB6\u653B\u51FB"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 59|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Player Attack
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: true
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: true
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: requireMouseInScreen
-      Entry: 5
-      Data: true
-    - Name: boolActionGroups
-      Entry: 7
-      Data: 60|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 61|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 62|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 323
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 1
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 63|InputEventConfigOfBoolArg, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: show_details
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 64|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u663E\u793A\u7EC6\u8282"
-    - Name: allTranslations
-      Entry: 7
-      Data: 65|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 66|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u663E\u793A\u7EC6\u8282"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 67|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Show Details
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: true
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: false
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: requireMouseInScreen
-      Entry: 5
-      Data: true
-    - Name: boolActionGroups
-      Entry: 7
-      Data: 68|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 69|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 70|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 308
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 0
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 71|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 72|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 307
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 0
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 73|InputEventConfigOfBoolArg, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: toggle_input_mapping_options_ui
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 74|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u5207\u6362\u8F93\u5165\u6620\u5C04\u9762\u677F\u5F00\u5173"
-    - Name: allTranslations
-      Entry: 7
-      Data: 75|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 76|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u5207\u6362\u8F93\u5165\u6620\u5C04\u9762\u677F\u5F00\u5173"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 77|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Toggle Input Mapping Options UI
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: true
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: false
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: requireMouseInScreen
-      Entry: 5
-      Data: true
-    - Name: boolActionGroups
-      Entry: 7
-      Data: 78|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 79|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 80|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 284
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 1
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 7
-      Data: 81|InputActionRuntimeData, Assembly-CSharp
-    - Name: heldTime
-      Entry: 4
-      Data: 0
-    - Name: hasTriggeredHoldDown
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 82|InputEventConfigOfBoolArg, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: toggle_character_profile_ui
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 83|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u5F00\u5173\u89D2\u8272\u9762\u677F"
-    - Name: allTranslations
-      Entry: 7
-      Data: 84|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 85|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u5F00\u5173\u89D2\u8272\u9762\u677F"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 86|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Toggle Character Profile
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: true
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: false
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: requireMouseInScreen
-      Entry: 5
-      Data: true
-    - Name: boolActionGroups
-      Entry: 7
-      Data: 87|System.Collections.Generic.List`1[[InputActionGroup, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 88|InputActionGroup, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 89|System.Collections.Generic.List`1[[InputAction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: InputAction, Assembly-CSharp
-    - Name: type
-      Entry: 3
-      Data: 0
-    - Name: keyCode
-      Entry: 3
-      Data: 283
-    - Name: keyBoardTriggerType
-      Entry: 3
-      Data: 1
-    - Name: holdThreshold
-      Entry: 4
-      Data: 0
-    - Name: runtimeData
-      Entry: 7
-      Data: 90|InputActionRuntimeData, Assembly-CSharp
-    - Name: heldTime
-      Entry: 4
-      Data: 0
-    - Name: hasTriggeredHoldDown
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 91|GlobalEventConfig, Assembly-CSharp
-    - Name: id
-      Entry: 1
-      Data: display_entity_tooltip
-    - Name: isActive
-      Entry: 5
-      Data: true
-    - Name: isDebugging
-      Entry: 5
-      Data: false
-    - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: uniqueGameType
-      Entry: 6
-      Data: 
-    - Name: name
-      Entry: 7
-      Data: 92|Basis.StringTranslation, Assembly-CSharp
-    - Name: contentPreviewing
-      Entry: 1
-      Data: "\u9884\u5236\u4F53"
-    - Name: allTranslations
-      Entry: 7
-      Data: 93|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 94|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: Chinese
-    - Name: translation
-      Entry: 1
-      Data: "\u663E\u793A\u5B9E\u4F53\u63D0\u793A\u6846"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 95|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
-    - Name: languageType
-      Entry: 1
-      Data: English
-    - Name: translation
-      Entry: 1
-      Data: Display Entity Tooltip
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: requireUpdate
-      Entry: 5
-      Data: false
-    - Name: enableTriggerEvent
-      Entry: 5
-      Data: false
-    - Name: triggerDuration
-      Entry: 4
-      Data: 0.2
-    - Name: triggerEventInvokeTrueOnce
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -1553,11 +1366,11 @@ MonoBehaviour:
       Data: 
     - Name: keyCodeTranslations
       Entry: 7
-      Data: 96|System.Collections.Generic.Dictionary`2[[UnityEngine.KeyCode, UnityEngine.CoreModule],[Basis.StringTranslation,
+      Data: 86|System.Collections.Generic.Dictionary`2[[UnityEngine.KeyCode, UnityEngine.CoreModule],[Basis.StringTranslation,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 97|System.Collections.Generic.EnumEqualityComparer`1[[UnityEngine.KeyCode,
+      Data: 87|System.Collections.Generic.EnumEqualityComparer`1[[UnityEngine.KeyCode,
         UnityEngine.CoreModule]], mscorlib
     - Name: 
       Entry: 12
@@ -1579,20 +1392,20 @@ MonoBehaviour:
       Data: 323
     - Name: $v
       Entry: 7
-      Data: 98|Basis.StringTranslation, Assembly-CSharp
+      Data: 88|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 1
       Data: "\u9F20\u6807\u5DE6\u952E"
     - Name: allTranslations
       Entry: 7
-      Data: 99|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 89|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 100|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 90|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -1604,7 +1417,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 101|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 91|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English
@@ -1634,20 +1447,20 @@ MonoBehaviour:
       Data: 324
     - Name: $v
       Entry: 7
-      Data: 102|Basis.StringTranslation, Assembly-CSharp
+      Data: 92|Basis.StringTranslation, Assembly-CSharp
     - Name: contentPreviewing
       Entry: 6
       Data: 
     - Name: allTranslations
       Entry: 7
-      Data: 103|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+      Data: 93|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 104|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 94|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: Chinese
@@ -1659,7 +1472,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 105|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+      Data: 95|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
     - Name: languageType
       Entry: 1
       Data: English

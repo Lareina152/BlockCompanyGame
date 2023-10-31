@@ -18,7 +18,7 @@ public class ParticleSpawnConfig : BaseConfigClass
     }
 }
 
-public static class ParticleSpawner
+public class ParticleSpawner : UniqueMonoBehaviour<ParticleSpawner>
 {
     public static Dictionary<string, GameObjectPool<ParticleSystem>> allPools = new();
     public static Dictionary<ParticleSystem, string> allParticleIDs = new();
@@ -33,14 +33,15 @@ public static class ParticleSpawner
     /// 回收粒子
     /// </summary>
     /// <param name="particle"></param>
-    public static void ReturnParticle(ParticleSystem particle)
+    public static void Return(ParticleSystem particle)
     {
         if (particle.gameObject.activeSelf)
         {
             var id = allParticleIDs[particle];
             var pool = allPools[id];
 
-            particle.transform.SetParent(GameCoreSettingBase.particleSpawnerGeneralSetting.container);
+            particle.transform.
+                SetParent(GameCoreSettingBase.particleSpawnerGeneralSetting.container);
             pool.Return(particle);
         }
     }
@@ -53,10 +54,14 @@ public static class ParticleSpawner
     /// <param name="pos">位置</param>
     /// <param name="parent">父Transform</param>
     /// <returns></returns>
-    public static ParticleSystem SpawnParticle(string id, Vector3 pos, Transform parent = null)
+    [Button("生成粒子")]
+    public static ParticleSystem Spawn(
+        [ValueDropdown("@GameCoreSettingBase." +
+                       "particleSpawnerGeneralSetting.GetPrefabNameList()")]
+        string id, Vector3 pos, Transform parent = null)
     {
         var registeredParticle = GameCoreSettingBase.particleSpawnerGeneralSetting.GetPrefabStrictly(id);
-
+        
         GameObjectPool<ParticleSystem> pool;
 
         if (allPools.ContainsKey(id) == false)
@@ -69,7 +74,8 @@ public static class ParticleSpawner
             pool = allPools[id];
         }
 
-        var container = parent == null ? GameCoreSettingBase.particleSpawnerGeneralSetting.container : parent;
+        var container = parent == null ? 
+            GameCoreSettingBase.particleSpawnerGeneralSetting.container : parent;
 
         var newParticleSystem = pool.Get(registeredParticle.particlePrefab, container);
 
@@ -96,26 +102,35 @@ public static class ParticleSpawner
         {
             registeredParticle.duration.GetValue().DelayAction(() =>
             {
-                ReturnParticle(newParticleSystem);
+                Return(newParticleSystem);
             });
         }
 
         return newParticleSystem;
     }
 
-    public static ParticleSystem SpawnPixelDestroyParticle(Vector3 pos, Sprite sprite)
+    [Button("设置持续时间")]
+    public static void SetDuration(
+        [ValueDropdown("@GameCoreSettingBase.particleSpawnerGeneralSetting." +
+                       "GetPrefabNameList()")]
+        string id, float duration)
     {
-        var newParticleSystem = SpawnParticle("pixel_destroy", pos);
-        newParticleSystem.SetSampleTexture(sprite);
-
-        return newParticleSystem;
+        GameCoreSettingBase.particleSpawnerGeneralSetting.SetDuration(id, duration);
     }
 
-    public static ParticleSystem SpawnPixelExplosionParticle(Vector3 pos, Sprite sprite)
-    {
-        var newParticleSystem = SpawnParticle("pixel_explosion", pos);
-        newParticleSystem.SetSampleTexture(sprite);
+    //public static ParticleSystem SpawnPixelDestroyParticle(Vector3 pos, Sprite sprite)
+    //{
+    //    var newParticleSystem = SpawnParticle("pixel_destroy", pos);
+    //    newParticleSystem.SetSampleTexture(sprite);
 
-        return newParticleSystem;
-    }
+    //    return newParticleSystem;
+    //}
+
+    //public static ParticleSystem SpawnPixelExplosionParticle(Vector3 pos, Sprite sprite)
+    //{
+    //    var newParticleSystem = SpawnParticle("pixel_explosion", pos);
+    //    newParticleSystem.SetSampleTexture(sprite);
+
+    //    return newParticleSystem;
+    //}
 }

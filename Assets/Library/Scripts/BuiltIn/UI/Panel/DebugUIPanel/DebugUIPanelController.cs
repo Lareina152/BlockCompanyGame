@@ -92,7 +92,10 @@ public class DebugUIPanelController : UIToolkitPanelController
 
         foreach (var debugEntry in DebugEntry.GetAllPrefabs())
         {
-            AddEntry(debugEntry);
+            if (debugEntry.isActive)
+            {
+                AddEntry(debugEntry);
+            }
         }
     }
 

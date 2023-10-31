@@ -23,4 +23,12 @@ public class InGameMainUIPanelPreset : UIToolkitPanelPreset
     [LabelText("重置按钮释放的图标")]
     [Required]
     public Texture2D resetButtonReleasedIcon;
+
+    [LabelText("左玩家道具面板名称")]
+    [ValueDropdown(nameof(GetVisualTreeNames))]
+    public string leftPlayerItemPanelName;
+
+    [LabelText("右玩家道具面板名称")]
+    [ValueDropdown(nameof(GetVisualTreeNames))]
+    public string rightPlayerItemPanelName;
 }

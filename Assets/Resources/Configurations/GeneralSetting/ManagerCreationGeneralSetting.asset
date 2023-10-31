@@ -22,6 +22,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -46,7 +49,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 9
     - Name: 
       Entry: 7
       Data: 
@@ -170,6 +173,102 @@ MonoBehaviour:
     - Name: container
       Entry: 10
       Data: 5
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 8|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: TestingCore
+    - Name: container
+      Entry: 10
+      Data: 6
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 7
+      Data: 9|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: EnvironmentCore
+    - Name: container
+      Entry: 6
+      Data: 
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 7
+      Data: 10|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: VFXCore
+    - Name: container
+      Entry: 10
+      Data: 7
+    - Name: parentContainer
+      Entry: 9
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 7
+      Data: 11|ContainerChooser, Assembly-CSharp
+    - Name: containerID
+      Entry: 1
+      Data: OtherCore
+    - Name: container
+      Entry: 10
+      Data: 8
     - Name: parentContainer
       Entry: 9
       Data: 3

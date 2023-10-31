@@ -15,6 +15,8 @@ public class Entity :
 
     public bool isDestroyed { get; private set; }
 
+    public bool initDone {get; private set; }
+
     public void InitEntity(EntityController controller)
     {
         this.controller = controller;
@@ -22,9 +24,31 @@ public class Entity :
         Note.note.AssertIsNotNull(controller, nameof(controller));
 
         OnInit();
+
+        initDone = true;
     }
 
     protected virtual void OnInit()
+    {
+
+    }
+
+    public void Update()
+    {
+        OnUpdate();
+    }
+
+    protected virtual void OnUpdate()
+    {
+
+    }
+
+    public void FixedUpdate()
+    {
+        OnFixedUpdate();
+    }
+
+    protected virtual void OnFixedUpdate()
     {
 
     }
@@ -37,6 +61,16 @@ public class Entity :
     }
 
     protected virtual void OnDestroy()
+    {
+
+    }
+
+    public void DrawGizmos()
+    {
+        OnDrawGizmos();
+    }
+
+    protected virtual void OnDrawGizmos()
     {
 
     }

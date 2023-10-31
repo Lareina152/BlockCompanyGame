@@ -750,7 +750,7 @@ namespace ConfigurationBasis
                     {
                         contentPreviewing =
                             ", ".Join(valueProbabilities.
-                                Select(item => $"{ValueToPreview(item.value)}:{item.probability}%"));
+                                Select(item => $"{ValueToPreview(item.value)}:{item.probability.ToString(1)}%"));
                     }
                     
                     break;

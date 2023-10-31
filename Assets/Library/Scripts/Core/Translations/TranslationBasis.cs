@@ -28,7 +28,7 @@ namespace Basis
             [GUIColor(0.3f, 0.8f, 0.8f)]
             [ValueDropdown("@GameSetting.translationGeneralSetting.GetPrefabIDList()"), HideLabel]
             [InfoBox("该语言不存在", InfoMessageType.Error,
-                VisibleIf = "@!GameSetting.translationGeneralSetting.ContainsID(languageType)")]
+                VisibleIf = "@!GameSetting.translationGeneralSetting.ContainsPrefabID(languageType)")]
             [JsonProperty]
             public string languageType;
             [HideLabel, MultiLineProperty(3)]

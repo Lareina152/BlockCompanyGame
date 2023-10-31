@@ -76,7 +76,7 @@ public class TranslationGeneralSetting :
             currentLanguage = StringTranslation.ANY_LANGUAGE;
         }
 
-        if (ContainsID(currentLanguage) == false)
+        if (ContainsPrefabID(currentLanguage) == false)
         {
             Note.note.Error($"当前语言不在语言设置字典里");
         }
@@ -116,7 +116,7 @@ public class TranslationGeneralSetting :
         [ValueDropdown("@GetPrefabNameList()")]
         string newCurrentLanguage)
     {
-        if (ContainsID(newCurrentLanguage) == false)
+        if (ContainsPrefabID(newCurrentLanguage) == false)
         {
             Note.note.Warning($"不存在此语言:{newCurrentLanguage}");
         }

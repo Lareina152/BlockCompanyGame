@@ -36,6 +36,7 @@ MonoBehaviour:
   noteGeneralSetting: {fileID: 11400000, guid: 3855831c2a0b6da46806c0bc6bae294c, type: 2}
   particleSpawnerGeneralSetting: {fileID: 11400000, guid: 9380d82a4cb81814bbc44759861ccacc, type: 2}
   trailSpawnerGeneralSetting: {fileID: 11400000, guid: ab04461b88f515a41a2ab069ca63a52c, type: 2}
+  audioGeneralSetting: {fileID: 11400000, guid: 3469721e8c269d5439087aa27c153f64, type: 2}
   uiParticleGeneralSetting: {fileID: 11400000, guid: 9795bccbcbb71df4a906c3c4cf5e127c, type: 2}
   mapCoreGeneralSetting: {fileID: 11400000, guid: efbd6f94d79e2f04f9879074df46d0ff, type: 2}
   extRuleTileGeneralSetting: {fileID: 11400000, guid: 1db3e0dcdfa0f544799801015770481f, type: 2}

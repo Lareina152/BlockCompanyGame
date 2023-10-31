@@ -1,58 +1,111 @@
 ﻿using Basis;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public static class ComponentFunc
+namespace Basis.Utility
 {
-    public static T QueryComponentOnChildren<T>(this Transform t) where T : Component
+    public static class ComponentUtility
     {
-        foreach (var transform in t.GetAllChildren(true))
-        {
-            var component = transform.GetComponent<T>();
+        #region Query
 
-            if (component != null)
+        public static T QueryComponentInChildren<T>(this Component c, bool includingSelf) where T : Component
+        {
+            foreach (var transform in c.transform.GetAllChildren(includingSelf))
             {
-                return component;
+                var component = transform.GetComponent<T>();
+
+                if (component != null)
+                {
+                    return component;
+                }
+            }
+
+            return default;
+        }
+
+        public static T QueryComponentInChildren<T>(this Component c, string name, bool includingSelf)
+            where T : Component
+        {
+            foreach (var transform in c.transform.GetAllChildren(includingSelf))
+            {
+                if (transform.name != name)
+                {
+                    continue;
+                }
+
+                var component = transform.GetComponent<T>();
+
+                if (component != null)
+                {
+                    return component;
+                }
+            }
+
+            return default;
+        }
+
+        public static T QueryComponentInParents<T>(this Component c, bool includingSelf)
+            where T : Component
+        {
+            foreach (var transform in c.transform.GetAllParents(includingSelf))
+            {
+                var component = transform.GetComponent<T>();
+
+                if (component != null)
+                {
+                    return component;
+                }
+            }
+
+            return default;
+        }
+
+        #endregion
+
+        #region Find
+
+        public static IEnumerable<T> FindComponentsInChildren<T>(this Component c, bool includingSelf)
+            where T : Component
+        {
+            foreach (var transform in c.transform.GetAllChildren(includingSelf))
+            {
+                var components = transform.GetComponents<T>();
+
+                foreach (var component in components)
+                {
+                    yield return component;
+                }
             }
         }
 
-        return default;
-    }
+        #endregion
 
-    public static T QueryComponentOnChildren<T>(this Transform t, string name) where T : Component
-    {
-        foreach (var transform in t.GetAllChildren(true))
+        #region Has
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool HasComponent<T>(this Component c) where T : Component
         {
-            if (transform.name != name)
-            {
-                continue;
-            }
-
-            var component = transform.GetComponent<T>();
-
-            if (component != null)
-            {
-                return component;
-            }
+            return c.GetComponent<T>() != null;
         }
 
-        return default;
-    }
-
-    public static T QueryComponentOnParents<T>(this Transform t) where T : Component
-    {
-        foreach (var transform in t.GetAllParents(true))
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool HasComponent<T>(this GameObject obj) where T : Component
         {
-            var component = transform.GetComponent<T>();
-
-            if (component != null)
-            {
-                return component;
-            }
+            return obj.GetComponent<T>() != null;
         }
 
-        return default;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool HasComponentInChildren<T>(this Component c, bool includingSelf) 
+            where T : Component
+        {
+            return c.transform.GetAllChildren(includingSelf).
+                Any(child => child.HasComponent<T>());
+        }
+
+        #endregion
     }
 }

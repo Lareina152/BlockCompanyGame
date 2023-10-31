@@ -9,18 +9,6 @@ public class BlackHoleController : GamePropertyController
 {
     public BlackHole blackHole { get; private set; }
 
-    [ShowInInspector]
-    private float gravitationalRadius;
-
-    [ShowInInspector]
-    private float centripetalForce;
-
-    [ShowInInspector]
-    private float gravitationalDirectionRandomAngleRange;
-
-    [ShowInInspector]
-    private float lifeTime;
-
     protected override void OnInit()
     {
         base.OnInit();
@@ -28,66 +16,21 @@ public class BlackHoleController : GamePropertyController
         blackHole = entity as BlackHole;
 
         Note.note.AssertIsNotNull(blackHole, nameof(blackHole));
-
-        gravitationalRadius = blackHole.gravitationalRadius;
-        centripetalForce = blackHole.centripetalForce;
-        gravitationalDirectionRandomAngleRange = blackHole.gravitationalDirectionRandomAngleRange;
     }
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (initDone == false)
+        var entityCtrl = other.gameObject.GetComponent<EntityController>();
+
+        if (entityCtrl != null)
         {
-            return;
-        }
-
-        lifeTime += Time.deltaTime;
-
-        if (lifeTime > blackHole.maxLifeTime)
-        {
-            RemoveEntity(this);
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        var entityColliders = 
-            Physics2D.OverlapCircleAll(transform.position.XY(), gravitationalRadius);
-
-        foreach (var collider in entityColliders)
-        {
-            var entityCtrl = collider.GetComponent<EntityController>();
-
-            if (entityCtrl == null || entityCtrl == this)
+            if (entityCtrl.entity is IResettable targetResettable and not Player)
             {
-                continue;
+                var blackHoleResettable = blackHole as IResettable;
+                targetResettable.SetArea(blackHoleResettable.isLeft);
             }
 
-            var rigidbody2D = entityCtrl.GetComponent<Rigidbody2D>();
-
-            if (rigidbody2D == null)
-            {
-                continue;
-            }
-
-            var dir = transform.position.XY() - entityCtrl.transform.position.XY();
-
-            var distance = dir.magnitude;
-
-            dir = dir.normalized;
-
-            dir = dir.ClockwiseRotate((-gravitationalDirectionRandomAngleRange).
-                RandomRange(gravitationalDirectionRandomAngleRange));
-
-            var force = 0f.Lerp(centripetalForce, distance / gravitationalRadius);
-
-            rigidbody2D.AddForce(dir * force);
+            StageManager.ResetEntity(entityCtrl);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position.XY(), gravitationalRadius);
     }
 }

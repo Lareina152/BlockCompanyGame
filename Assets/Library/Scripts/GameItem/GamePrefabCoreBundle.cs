@@ -66,9 +66,9 @@ namespace Basis.GameItem
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool ContainsID(string id);
+        public bool ContainsPrefabID(string id);
 
-        public bool ContainsIDIgnoreActiveState(string id);
+        public bool ContainsActivePrefabID(string id);
 
         public string GetTypeName(string typeID);
 
@@ -537,6 +537,37 @@ namespace Basis.GameItem
                 return null;
             }
 
+            public static TPrefab GetActivePrefab(string id)
+            {
+                var prefab = GetPrefab(id);
+
+                if (prefab == null)
+                {
+                    return null;
+                }
+
+                if (prefab.isActive == false)
+                {
+                    Note.note.Warning($"id为{id}的{typeof(TPrefab)}未启用");
+                    return null;
+                }
+
+                return prefab;
+            }
+
+            public static T GetActivePrefab<T>(string id) where T : TPrefab
+            {
+                var prefab = GetActivePrefab(id);
+
+                if (prefab is T t)
+                {
+                    return t;
+                }
+
+                Note.note.Error($"id为{id}的{typeof(TPrefab)}类型不是{typeof(T)}");
+                return null;
+            }
+
             /// <summary>
             /// 获得随机的预制体
             /// </summary>
@@ -552,9 +583,19 @@ namespace Basis.GameItem
             /// </summary>
             /// <returns></returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public static IReadOnlyList<TPrefab> GetAllPrefabs()
+            public static IEnumerable<TPrefab> GetAllPrefabs()
             {
                 return generalSetting.GetAllPrefabs();
+            }
+
+            /// <summary>
+            /// 获取所有预制体，但是不保证顺序
+            /// </summary>
+            /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static IEnumerable<TPrefab> GetAllPrefabsUnordered()
+            {
+                return allPrefabsByID.Values;
             }
 
             /// <summary>
@@ -604,6 +645,24 @@ namespace Basis.GameItem
                 }
 
                 return null;
+            }
+
+            #endregion
+
+            #region Has Prefab
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static bool ContainsPrefabID(string id)
+            {
+                return allPrefabsByID.ContainsKey(id);
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public static bool ContainsActivePrefabID(string id)
+            {
+                var prefab = GetPrefab(id);
+
+                return prefab is { isActive: true };
             }
 
             #endregion
@@ -821,7 +880,7 @@ namespace Basis.GameItem
                         Note.note.Warning($"重复注册扩展预制体id:{id}，原先注册的扩展预制体被覆盖");
                     }
 
-                    if (generalSetting.ContainsID(id) == false)
+                    if (generalSetting.ContainsPrefabID(id) == false)
                     {
                         if (instance.autoAddToPrefabList)
                         {
@@ -1145,6 +1204,34 @@ namespace Basis.GameItem
                 }
             }
 
+            [Button("移除ID重复的预制体")]
+            [TitleGroup(TEST_CATEGORY)]
+            [ShowIf(nameof(ContainsSameID))]
+            private void RemoveDuplicateIDPrefabs()
+            {
+                var tempPrefabs = allGameItemPrefabs.ToArray().ToList();
+
+                tempPrefabs.Reverse();
+
+                foreach (var tempPrefab in tempPrefabs)
+                {
+                    int count = 0;
+
+                    foreach (var prefab in allGameItemPrefabs)
+                    {
+                        if (prefab.id == tempPrefab.id)
+                        {
+                            count++;
+                        }
+                    }
+                    
+                    if (count >= 2)
+                    {
+                        allGameItemPrefabs.Remove(tempPrefab);
+                    }
+                }
+            }
+
             [Button(@"@""将第一个"" + prefabName + prefabSuffixName + ""设成默认ID和默认名称""")]
             [TitleGroup(TEST_CATEGORY, Order = 100)]
             [ShowIf("@allGameItemPrefabs != null && allGameItemPrefabs.Count > 0 && allGameItemPrefabs[0] != null" +
@@ -1333,7 +1420,7 @@ namespace Basis.GameItem
                     //}
                     //catch (Exception e)
                     //{
-                    //    note.Warning(e.ToString());
+                    //    Note.note.Warning(e.ToString());
                     //    skipCardSettingCount++;
                     //}
                 }
@@ -1349,13 +1436,6 @@ namespace Basis.GameItem
                 {
                     Note.note.Warning($"跳过了{skipCardSettingCount}个{prefabName}{prefabSuffixName}的加载");
                 }
-            }
-
-            protected override void OnPostInit()
-            {
-                base.OnPostInit();
-
-
             }
 
             #endregion
@@ -1687,7 +1767,7 @@ namespace Basis.GameItem
                     Note.note.Warning("id为空");
                 }
 
-                if (ContainsID(prefab.id) == false)
+                if (ContainsPrefabID(prefab.id) == false)
                 {
                     allGameItemPrefabs.Add(prefab);
                 }
@@ -1706,7 +1786,7 @@ namespace Basis.GameItem
                     Note.note.Warning("id为空");
                 }
 
-                if (ContainsID(prefab.id) == false)
+                if (ContainsPrefabID(prefab.id) == false)
                 {
                     allGameItemPrefabs.Insert(0, prefab);
                 }
@@ -1726,7 +1806,7 @@ namespace Basis.GameItem
                     Note.note.Error("id为空");
                 }
 
-                if (ContainsID(prefab.id) == false)
+                if (ContainsPrefabID(prefab.id) == false)
                 {
                     allGameItemPrefabs.Add(prefab);
                 }
@@ -1751,7 +1831,7 @@ namespace Basis.GameItem
                     return false;
                 }
 
-                if (ContainsIDIgnoreActiveState(prefab.id) == false)
+                if (ContainsPrefabID(prefab.id) == false)
                 {
                     allGameItemPrefabs.Add(prefab);
                     newPrefab = prefab;
@@ -1785,20 +1865,46 @@ namespace Basis.GameItem
             /// </summary>
             /// <returns>返回包含所有预制体的List</returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public IReadOnlyList<TPrefab> GetAllPrefabs()
+            public IEnumerable<TPrefab> GetAllPrefabs()
             {
                 return allGameItemPrefabs;
             }
 
             /// <summary>
             /// 通过ID获取预制体，如果没有会返回Null
-            /// 最好仅在Editor模式下调用，因为此方法效率较低
             /// </summary>
             /// <param name="id"></param>
             /// <returns></returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public TPrefab GetPrefab(string id)
             {
+                if (initDone && Application.isPlaying)
+                {
+                    return GameItemPrefab.GetPrefab(id);
+                }
+
+                if (allGameItemPrefabs == null || allGameItemPrefabs.Count == 0)
+                {
+                    return null;
+                }
+
+                return allGameItemPrefabs.FirstOrDefault(prefab =>
+                    prefab != null && prefab.id == id);
+            }
+
+            /// <summary>
+            /// 通过ID获取isActive为True的预制体，如果没有会返回Null
+            /// </summary>
+            /// <param name="id"></param>
+            /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public TPrefab GetActivePrefab(string id)
+            {
+                if (initDone && Application.isPlaying)
+                {
+                    return GameItemPrefab.GetActivePrefab(id);
+                }
+
                 if (allGameItemPrefabs == null || allGameItemPrefabs.Count == 0)
                 {
                     return null;
@@ -1810,7 +1916,6 @@ namespace Basis.GameItem
 
             /// <summary>
             /// 严格通过ID获取预制体，如果没有就报错
-            /// 最好仅在Editor模式下调用，因为此方法效率较低
             /// </summary>
             /// <param name="id"></param>
             /// <returns></returns>
@@ -1818,6 +1923,7 @@ namespace Basis.GameItem
             public TPrefab GetPrefabStrictly(string id)
             {
                 var prefab = GetPrefab(id);
+
                 if (prefab == null)
                 {
                     Note.note.Error($"id为{id}的{prefabName}{prefabSuffixName}不存在");
@@ -1833,6 +1939,21 @@ namespace Basis.GameItem
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public TPrefab GetRandomPrefab()
             {
+                if (initDone && Application.isPlaying)
+                {
+                    return GameItemPrefab.GetRandomPrefab();
+                }
+
+                return allGameItemPrefabs.Where(prefab => prefab is not null).Choose();
+            }
+
+            /// <summary>
+            /// 随机获得一个isActive为True的预制体
+            /// </summary>
+            /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public TPrefab GetRandomActivePrefab()
+            {
                 return allGameItemPrefabs.Where(prefab => prefab is { isActive: true }).Choose();
             }
 
@@ -1847,27 +1968,26 @@ namespace Basis.GameItem
             }
 
             /// <summary>
+            /// 随机获取isActive为True的预制体ID，如果无预制体返回NUll
+            /// </summary>
+            /// <returns></returns>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            public string GetRandomActivePrefabID()
+            {
+                return GetRandomActivePrefab()?.id;
+            }
+
+            /// <summary>
             /// 获取全部预制体的ID
             /// </summary>
             /// <returns>返回所有预制体的ID构成的IEnumerable</returns>
             public IEnumerable<string> GetPrefabIDList()
             {
-                if (allGameItemPrefabs != null)
-                {
-                    foreach (var prefab in allGameItemPrefabs)
-                    {
-                        if (prefab is { isActive: true })
-                        {
-                            yield return prefab.id;
-                        }
-                    }
-                }
-
+                return allGameItemPrefabs?.Select(prefab => prefab.id);
             }
 
             /// <summary>
             /// 获取特定ID预制体的名称
-            /// 最好仅在Editor模式下调用，因为此方法效率较低
             /// </summary>
             /// <param name="id">预制体ID</param>
             /// <returns></returns>
@@ -1894,7 +2014,7 @@ namespace Basis.GameItem
                 {
                     foreach (var prefab in allGameItemPrefabs)
                     {
-                        if (prefab is { isActive: true })
+                        if (prefab is not null)
                         {
                             yield return new ValueDropdownItem<string>(prefab.name, prefab.id);
                         }
@@ -1914,7 +2034,7 @@ namespace Basis.GameItem
                 {
                     foreach (var prefab in allGameItemPrefabs)
                     {
-                        if (prefab is { isActive: true } && specificType.IsInstanceOfType(prefab))
+                        if (prefab is not null && specificType.IsInstanceOfType(prefab))
                         {
                             yield return new ValueDropdownItem<string>(prefab.name, prefab.id);
                         }
@@ -1926,32 +2046,47 @@ namespace Basis.GameItem
 
             #region Contains
 
+            public bool ContainsPrefabWhere(Func<TPrefab, bool> predicate)
+            {
+                if (allGameItemPrefabs == null || allGameItemPrefabs.Count == 0)
+                {
+                    return false;
+                }
+
+                return allGameItemPrefabs.Any(predicate);
+            }
+
             /// <summary>
             /// 预制体列表是否包含某个特定ID
-            /// 最好仅在Editor模式下调用，因为此方法效率较低
             /// </summary>
             /// <param name="id"></param>
             /// <returns></returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public bool ContainsID(string id)
+            public bool ContainsPrefabID(string id)
             {
-                if (allGameItemPrefabs == null || allGameItemPrefabs.Count == 0)
+                if (initDone && Application.isPlaying)
                 {
-                    return false;
+                    return GameItemPrefab.ContainsPrefabID(id);
                 }
 
-                return allGameItemPrefabs.Any(prefab => prefab != null && prefab.id == id && prefab.isActive);
+                return ContainsPrefabWhere(prefab => prefab != null && prefab.id == id);
             }
 
+            /// <summary>
+            /// 预制体列表是否包含某个特定ID，且此预制体的isActive为True
+            /// </summary>
+            /// <param name="id"></param>
+            /// <returns></returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            public bool ContainsIDIgnoreActiveState(string id)
+            public bool ContainsActivePrefabID(string id)
             {
-                if (allGameItemPrefabs == null || allGameItemPrefabs.Count == 0)
+                if (initDone && Application.isPlaying)
                 {
-                    return false;
+                    return GameItemPrefab.ContainsActivePrefabID(id);
                 }
 
-                return allGameItemPrefabs.Any(prefab => prefab != null && prefab.id == id);
+                return ContainsPrefabWhere(prefab => prefab != null && prefab.id == id && 
+                                                     prefab.isActive);
             }
 
             /// <summary>
@@ -1960,7 +2095,8 @@ namespace Basis.GameItem
             /// <returns></returns>
             public bool ContainsSameID()
             {
-                return allGameItemPrefabs.Where(prefab => prefab != null).ContainsSame(prefab => prefab.id);
+                return allGameItemPrefabs.Where(prefab => prefab != null).
+                    ContainsSame(prefab => prefab.id);
             }
 
             /// <summary>
@@ -1974,8 +2110,8 @@ namespace Basis.GameItem
                     return false;
                 }
 
-                return allGameItemPrefabs.Where(prefab => prefab != null).Select(prefab => prefab.id)
-                    .Any(StringFunc.IsNullOrEmptyAfterTrim);
+                return allGameItemPrefabs.Where(prefab => prefab != null).
+                    Select(prefab => prefab.id).Any(StringFunc.IsNullOrEmptyAfterTrim);
             }
 
             /// <summary>

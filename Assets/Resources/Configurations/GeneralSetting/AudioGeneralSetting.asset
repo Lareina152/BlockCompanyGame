@@ -1,0 +1,582 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543f925e7ee3b91468bb1f61eefe4ada, type: 3}
+  m_Name: AudioGeneralSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 06a61dc7511b454458ea6e705a6cc902, type: 3}
+    - {fileID: 8300000, guid: 90e7cffd66b84474c83217118e772f31, type: 3}
+    - {fileID: 8300000, guid: 14ad68d9a3e07264fa9ffaa373094fa5, type: 3}
+    - {fileID: 8300000, guid: 10b88ee6e542f05438ef14528081dcb7, type: 3}
+    - {fileID: 8300000, guid: ef09bd57bcfaa5f4bbfb3e10b5369ed4, type: 3}
+    - {fileID: 8300000, guid: f5cd369331bc59042ba598e52180a6ea, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: typeBasicInfo
+      Entry: 7
+      Data: 0|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[AudioPreset,
+        Assembly-CSharp],[AudioGeneralSetting, Assembly-CSharp]], Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: audio
+    - Name: name
+      Entry: 7
+      Data: 1|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 
+    - Name: allTranslations
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 3|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u97F3\u6548"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Audio
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: subtypes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[AudioPreset,
+        Assembly-CSharp],[AudioGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[AudioPreset,
+        Assembly-CSharp],[AudioGeneralSetting, Assembly-CSharp]], Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: default_audio_type
+    - Name: name
+      Entry: 7
+      Data: 7|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: 
+    - Name: allTranslations
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 9|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: English
+    - Name: translation
+      Entry: 1
+      Data: Default Audio Type
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Chinese
+    - Name: translation
+      Entry: 1
+      Data: "\u9ED8\u8BA4\u97F3\u6548\u79CD\u7C7B"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: subtypes
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[AudioPreset,
+        Assembly-CSharp],[AudioGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parentID
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: parentID
+      Entry: 1
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: allGameItemPrefabs
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[AudioPreset, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 13|AudioPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: bomb_bird
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 14|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Bomb Bird
+    - Name: allTranslations
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 16|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Bomb Bird
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: audioClip
+      Entry: 10
+      Data: 0
+    - Name: volume
+      Entry: 4
+      Data: 1
+    - Name: autoCheckStop
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|AudioPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: bomb_boom
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 18|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Bomb Boom
+    - Name: allTranslations
+      Entry: 7
+      Data: 19|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 20|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Bomb Boom
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: audioClip
+      Entry: 10
+      Data: 1
+    - Name: volume
+      Entry: 4
+      Data: 1
+    - Name: autoCheckStop
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|AudioPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: boom_fuse
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 22|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Boom Fuse
+    - Name: allTranslations
+      Entry: 7
+      Data: 23|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 24|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Boom Fuse
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: audioClip
+      Entry: 10
+      Data: 2
+    - Name: volume
+      Entry: 4
+      Data: 0.505
+    - Name: autoCheckStop
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|AudioPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: glue
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 26|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Glue
+    - Name: allTranslations
+      Entry: 7
+      Data: 27|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 28|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Glue
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: audioClip
+      Entry: 10
+      Data: 3
+    - Name: volume
+      Entry: 4
+      Data: 1
+    - Name: autoCheckStop
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 29|AudioPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: blackhole
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 30|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: BlackHole
+    - Name: allTranslations
+      Entry: 7
+      Data: 31|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 32|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: BlackHole
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: audioClip
+      Entry: 10
+      Data: 4
+    - Name: volume
+      Entry: 4
+      Data: 1
+    - Name: autoCheckStop
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 33|AudioPreset, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: player_place
+    - Name: isActive
+      Entry: 5
+      Data: true
+    - Name: isDebugging
+      Entry: 5
+      Data: false
+    - Name: gameTypesID
+      Entry: 6
+      Data: 
+    - Name: uniqueGameType
+      Entry: 6
+      Data: 
+    - Name: name
+      Entry: 7
+      Data: 34|Basis.StringTranslation, Assembly-CSharp
+    - Name: contentPreviewing
+      Entry: 1
+      Data: Player Place
+    - Name: allTranslations
+      Entry: 7
+      Data: 35|System.Collections.Generic.List`1[[Basis.StringTranslation+LanguageInfo,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 36|Basis.StringTranslation+LanguageInfo, Assembly-CSharp
+    - Name: languageType
+      Entry: 1
+      Data: Any
+    - Name: translation
+      Entry: 1
+      Data: Player Place
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: audioClip
+      Entry: 10
+      Data: 5
+    - Name: volume
+      Entry: 4
+      Data: 1
+    - Name: autoCheckStop
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  useSpecificJsonFile: 0
+  jsonFile: {fileID: 0}
+  dataFolderRelativePath: Configurations
+  defaultJSONFileSuffix: txt
+  defaultTypeID: default_audio_type
+  isTypeIDUnique: 1
+  willShowPrefabOnWindowSide: 0
+  container:
+    containerID: Audio Container
+    container: {fileID: 0}

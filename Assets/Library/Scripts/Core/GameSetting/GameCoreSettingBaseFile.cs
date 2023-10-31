@@ -90,9 +90,13 @@ public class GameCoreSettingBaseFile : GameSettingBase, IManagerCreationProvider
     [Required]
     public ParticleSpawnerGeneralSetting particleSpawnerGeneralSetting;
 
-    [LabelText("粒子生成器设置"), BoxGroup(EFFECT_SETTING_CATEGORY)]
+    [LabelText("拖尾生成器设置"), BoxGroup(EFFECT_SETTING_CATEGORY)]
     [Required]
     public TrailSpawnerGeneralSetting trailSpawnerGeneralSetting;
+
+    [LabelText("音效设置"), BoxGroup(EFFECT_SETTING_CATEGORY)]
+    [Required]
+    public AudioGeneralSetting audioGeneralSetting;
 
     [LabelText("UI粒子通用设置"), BoxGroup(BUILTIN_MODULE_SETTING_CATEGORY)]
     [Required]
@@ -227,6 +231,8 @@ public class GameCoreSettingBaseFile : GameSettingBase, IManagerCreationProvider
                 Note.note.Error($"{propertyInfo.Name}不能为Null");
                 continue;
             }
+
+            generalSetting.ResetInitializationState();
 
             generalSetting.CheckSettings();
         }

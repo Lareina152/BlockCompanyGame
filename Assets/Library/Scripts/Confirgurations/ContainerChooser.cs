@@ -18,7 +18,6 @@ public class ContainerChooser : BaseConfigClass, IEnumerable<Transform>
 
     [LabelText("容器")]
     [SerializeField]
-    [ReadOnly]
     private Transform container;
 
     [LabelText("父容器")]

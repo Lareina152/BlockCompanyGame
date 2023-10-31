@@ -3,17 +3,18 @@ using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public abstract class GameSettingBase : SerializedScriptableObject
 {
     public enum InitializationStage
     {
-        None,
-        PreInit,
-        Init,
-        PostInit,
-        FinishInit,
+        None = 0,
+        PreInit = 1,
+        Init = 2,
+        PostInit = 3,
+        FinishInit = 4,
     }
 
     public const string DEBUGGING_CATEGORY = "调试";
@@ -24,15 +25,27 @@ public abstract class GameSettingBase : SerializedScriptableObject
 
     [LabelText("是否加载完成"), TitleGroup(DEBUGGING_CATEGORY)]
     [ShowInInspector, ReadOnly]
-    public bool initDone { get; private set; } = false;
+    public bool initDone
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private set;
+    }
 
     [LabelText("已完成初始化阶段"), TitleGroup(DEBUGGING_CATEGORY)]
     [ShowInInspector, ReadOnly]
-    public InitializationStage finishedInitializationStage { get; private set; } = InitializationStage.None;
+    public InitializationStage finishedInitializationStage
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        get;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private set;
+    }
 
     protected virtual void Awake()
     {
-
+        initDone = false;
     }
 
     public void PreInit()
@@ -90,6 +103,12 @@ public abstract class GameSettingBase : SerializedScriptableObject
     public virtual void CheckSettingsGUI()
     {
         CheckSettings();
+    }
+
+    public void ResetInitializationState()
+    {
+        initDone = false;
+        finishedInitializationStage = InitializationStage.None;
     }
 
     private bool hasSettingError = false;

@@ -382,7 +382,7 @@ namespace Basis.GameItem
                         continue;
                     }
 
-                    if (generalSetting.ContainsID(id) == false)
+                    if (generalSetting.ContainsPrefabID(id) == false)
                     {
                         Note.note.Warning($"通用设置里不包含此ID:{id}的预制体，无法注册扩展实例");
                         continue;
@@ -512,6 +512,30 @@ namespace Basis.GameItem
                 Note.note.AssertIsNotNull(result, nameof(result));
 
                 return result;
+            }
+
+            public static TInstance CreateRandom()
+            {
+                var prefab = GameItemPrefab.GetRandomPrefab();
+
+                return Create(prefab.id);
+            }
+
+            public static T CreateRandom<T>() where T : TInstance
+            {
+                var prefabs = GameItemPrefab.GetAllPrefabs();
+
+                var ids = new List<string>();
+
+                foreach (var prefab in prefabs)
+                {
+                    if (prefab.actualInstanceType.IsAssignableFrom(typeof(T)))
+                    {
+                        ids.Add(prefab.id);
+                    }
+                }
+
+                return Create<T>(ids.Choose());
             }
 
             #endregion

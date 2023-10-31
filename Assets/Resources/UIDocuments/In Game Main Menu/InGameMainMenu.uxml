@@ -1,6 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Resources/UIDocuments/In%20Game%20Main%20Menu/InGameMainMenuStyle.uss?fileID=7433441132597879392&amp;guid=b749077420df312429cc984c99f5b58a&amp;type=3#InGameMainMenuStyle" />
-    <ui:GroupBox name="Container" picking-mode="Ignore" style="position: relative; -unity-slice-scale: 5px; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-right: 3px;">
+    <ui:GroupBox picking-mode="Ignore" style="position: relative; -unity-slice-scale: 5px; flex-grow: 1; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-right: 3px;">
+        <ui:VisualElement class="itemContainer" style="flex-grow: 1; position: absolute; height: 210px; width: 210px; background-image: resource(&apos;Images/UI/UI_objectstate&apos;); top: 61px; left: 79px;">
+            <ui:VisualElement name="LeftPlayerItem" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="itemContainer" style="flex-grow: 1; position: absolute; height: 210px; width: 210px; background-image: resource(&apos;Images/UI/UI_objectstate&apos;); top: 61px; right: 79px;">
+            <ui:VisualElement name="RightPlayerItem" style="flex-grow: 1;" />
+        </ui:VisualElement>
         <ui:VisualElement name="ResetButton" style="flex-grow: 1; position: absolute; height: 108px; width: 263px; top: 58px; align-self: center; background-image: resource(&apos;Images/UI/UI_home_released&apos;);" />
     </ui:GroupBox>
 </ui:UXML>

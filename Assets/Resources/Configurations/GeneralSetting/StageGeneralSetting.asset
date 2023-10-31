@@ -25,3 +25,91 @@ MonoBehaviour:
   jsonFile: {fileID: 0}
   dataFolderRelativePath: Configurations
   defaultJSONFileSuffix: txt
+  gamePropertyItemGeneration:
+    contentPreviewing: "\u9ED1\u6D1E:33.3%, \u80F6\u6C34:33.3%, \u70B8\u5F39:33.3%"
+    isRandomValue: 1
+    fixedType: Single Value
+    value:
+      id: 
+    randomType: Weighted Select
+    valueProbabilities:
+    - value:
+        id: black_hole_item
+      ratio: 1
+      probability: 33.333332
+      tag: "\u4E00\u6837"
+    - value:
+        id: glue_item
+      ratio: 1
+      probability: 33.333332
+      tag: "\u4E00\u6837"
+    - value:
+        id: bomb_item
+      ratio: 1
+      probability: 33.333332
+      tag: "\u4E00\u6837"
+    startCircularIndex: 0
+    pingPong: 0
+    circularItems: []
+  gamePropertyGenerationInterval: 10
+  gamePropertyGenerationInitialCooldown: 0.88
+  blockItemGeneration:
+    contentPreviewing: "O\u578B\u65B9\u5757:14.3%, I\u578B\u65B9\u5757:14.3%, J\u578B\u65B9\u5757:14.3%,
+      L\u578B\u65B9\u5757:14.3%, S\u578B\u65B9\u5757:14.3%, T\u578B\u65B9\u5757:14.3%,
+      Z\u578B\u65B9\u5757:14.3%"
+    isRandomValue: 1
+    fixedType: Single Value
+    value:
+      id: 
+    randomType: Weighted Select
+    valueProbabilities:
+    - value:
+        id: o_block_item
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    - value:
+        id: i_block_item
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    - value:
+        id: j_block_item
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    - value:
+        id: l_block
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    - value:
+        id: s_block
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    - value:
+        id: t_block
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    - value:
+        id: z_block
+      ratio: 1
+      probability: 14.285714
+      tag: "\u4E00\u6837"
+    startCircularIndex: 0
+    pingPong: 0
+    circularItems: []
+  blockGenerationInterval: 3
+  blockGenerationInitialCooldown: 1
+  leftPlayerID: left_player
+  rightPlayerID: right_player
+  leftWallMask:
+    serializedVersion: 2
+    m_Bits: 16384
+  rightWallMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  winJudgeTime: 5
+  tubeSuctionForce: 22.42

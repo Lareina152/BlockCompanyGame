@@ -108,6 +108,10 @@ public class GameCoreSettingBase : UniqueGameSettingBaseInScene<GameCoreSettingB
         gameCoreSettingsFileBase == null ? null : gameCoreSettingsFileBase.
             trailSpawnerGeneralSetting;
 
+    public static AudioGeneralSetting audioGeneralSetting =>
+        gameCoreSettingsFileBase == null ? null : gameCoreSettingsFileBase.
+            audioGeneralSetting;
+
 
     public static UIParticleGeneralSetting uiParticleGeneralSetting =>
         gameCoreSettingsFileBase == null ? null : gameCoreSettingsFileBase.

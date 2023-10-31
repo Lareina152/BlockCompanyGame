@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - momo
+  - Teleport
   layers:
   - Default
   - TransparentFX
@@ -16,14 +17,14 @@ TagManager:
   - 
   - Blend
   - 
+  - Ground
+  - Player
+  - 
+  - Right Wall
+  - Left Wall
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GameProperty
   - 
   - 
   - 
@@ -59,4 +60,13 @@ TagManager:
     locked: 0
   - name: Entity
     uniqueID: 974769089
+    locked: 0
+  - name: VFX
+    uniqueID: 3770676913
+    locked: 0
+  - name: New Layer 8
+    uniqueID: 3412265051
+    locked: 0
+  - name: Foreground
+    uniqueID: 2006236893
     locked: 0

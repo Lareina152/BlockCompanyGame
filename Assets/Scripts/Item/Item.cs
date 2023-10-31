@@ -21,23 +21,40 @@ public class Item :
         hasPlaced = false;
     }
 
-    public EntityController Place(Vector2 pos)
+    public virtual bool CanPlace(Player player)
+    {
+        return hasPlaced == false;
+    }
+
+    public EntityController Place(Vector2 pos, bool isLeft)
     {
         if (hasPlaced)
         {
             Note.note.Error("不可重复使用物品");
         }
 
-        var entityCtrl = EntityManager.Create(origin.entityId, pos);
+        var entity = Entity.Create(origin.entityId);
 
-        OnPlace();
+        OnPrePlace(entity, isLeft);
+
+        var entityCtrl = EntityManager.Create(entity, pos);
+
+        OnPostPlace(entity, isLeft);
 
         hasPlaced = true;
 
         return entityCtrl;
     }
 
-    protected virtual void OnPlace()
+    protected virtual void OnPrePlace(Entity entity, bool isLeft)
+    {
+        if (entity is IResettable resettable)
+        {
+            resettable.SetArea(isLeft);
+        }
+    }
+
+    protected virtual void OnPostPlace(Entity entity, bool isLeft)
     {
 
     }

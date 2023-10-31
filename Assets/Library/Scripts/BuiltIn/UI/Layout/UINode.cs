@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Basis;
+using Basis.Utility;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -31,6 +31,6 @@ public class UINode : MonoBehaviour
 
     private void FindUITree()
     {
-        uiTree = transform.QueryComponentOnParents<UITree>();
+        uiTree = transform.QueryComponentInParents<UITree>(true);
     }
 }

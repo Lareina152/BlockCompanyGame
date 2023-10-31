@@ -23,8 +23,8 @@ MonoBehaviour:
     SerializationNodes:
     - Name: typeBasicInfo
       Entry: 7
-      Data: 0|GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo, Assembly-CSharp],[TranslationGeneralSetting,
-        Assembly-CSharp]], Assembly-CSharp
+      Data: 0|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo,
+        Assembly-CSharp],[TranslationGeneralSetting, Assembly-CSharp]], Assembly-CSharp
     - Name: id
       Entry: 1
       Data: language
@@ -76,7 +76,7 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo,
+      Data: 5|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo,
         Assembly-CSharp],[TranslationGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
         mscorlib
     - Name: 
@@ -84,8 +84,8 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo, Assembly-CSharp],[TranslationGeneralSetting,
-        Assembly-CSharp]], Assembly-CSharp
+      Data: 6|Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo,
+        Assembly-CSharp],[TranslationGeneralSetting, Assembly-CSharp]], Assembly-CSharp
     - Name: id
       Entry: 1
       Data: default_language_type
@@ -137,7 +137,7 @@ MonoBehaviour:
       Data: 
     - Name: subtypes
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo,
+      Data: 11|System.Collections.Generic.List`1[[Basis.GameItem.GamePrefabCoreBundle`2+GameTypeBasicInfo[[TranslationTypeInfo,
         Assembly-CSharp],[TranslationGeneralSetting, Assembly-CSharp]], Assembly-CSharp]],
         mscorlib
     - Name: 
@@ -187,9 +187,6 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: gameTypes
       Entry: 6
       Data: 
     - Name: uniqueGameType
@@ -245,9 +242,6 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: gameTypes
       Entry: 6
       Data: 
     - Name: uniqueGameType
@@ -315,9 +309,6 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: gameTypesID
-      Entry: 6
-      Data: 
-    - Name: gameTypes
       Entry: 6
       Data: 
     - Name: uniqueGameType
